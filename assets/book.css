@@ -152,6 +152,18 @@
 .chapter-table tr:last-child td { border-bottom: none; }
 .chapter-table tr:hover td { background: #fafafa; }
 
+/* Diagram */
+.diagram-wrapper {
+  margin: 24px 0; overflow-x: auto;
+}
+.concept-diagram {
+  width: 100%; height: auto; max-width: 660px;
+  display: block; margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .concept-diagram { min-width: 500px; }
+}
+
 /* Compare */
 .chapter-compare {
   display: flex; align-items: stretch; gap: 0;

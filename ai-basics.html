@@ -49,11 +49,11 @@
       </a>
       <a href="#ch2" class="sidebar-link" data-chapter="ch2">
         <span class="sidebar-num">二</span>
-        <span class="sidebar-title">为什么 OpenClaw 忽然火了</span>
+        <span class="sidebar-title">了解一下 AI 现在常见的黑话</span>
       </a>
       <a href="#ch3" class="sidebar-link" data-chapter="ch3">
         <span class="sidebar-num">三</span>
-        <span class="sidebar-title">常见术语到底什么意思？</span>
+        <span class="sidebar-title">为什么 OpenClaw 忽然火了</span>
       </a>
       <a href="#ch4" class="sidebar-link" data-chapter="ch4">
         <span class="sidebar-num">四</span>
@@ -77,21 +77,32 @@
     <article class="chapter" id="ch1">
       <div class="chapter-label">第一章</div>
       <h1>为什么 AI 最近几年这么火？</h1>
-      <p class="chapter-lead">其实 AI 研究已经搞了几十年了。只是从 2022 年底开始，普通人才真正用上了。</p>
+      <p class="chapter-lead">一句话：因为 2022 年底出了个 ChatGPT，让所有人第一次感受到"AI 居然能像人一样说话"。</p>
 
-      <h2>不是突然的，是积累到了一个爆发点</h2>
-      <p>科学家研究 AI 已经超过 60 年了。但在很长一段时间里，AI 只能做一些很简单的事，比如下棋、识别图片里的猫。</p>
-      <p>直到最近几年，几件事同时发生了：</p>
-      <ul class="chapter-list">
-        <li><strong>算力变强了</strong>——显卡（GPU）变得超级强大，能处理海量数据</li>
-        <li><strong>数据变多了</strong>——互联网上积累了几十年的文字、图片、视频，成了 AI 的"教材"</li>
-        <li><strong>方法变巧了</strong>——研究人员发现了一种叫 "Transformer" 的训练方法，效果特别好</li>
-      </ul>
-      <p>这三件事叠在一起，就像手机从"大哥大"突然变成了智能手机——不是某一项技术的突破，是所有东西<strong>同时到位了</strong>。</p>
+      <h2>以前的 AI：只会做选择题和填空题</h2>
+      <p>AI 研究其实已经搞了几十年了。但以前的 AI 本质上是<strong>根据设定好的问答集来回答问题</strong>——有人提前写好了"用户问 A 就回答 B"，没写到的问题，它就不会回答。</p>
+      <p>你可能遇到过那种客服机器人，问什么都答非所问，稍微换个说法它就不懂了。那就是旧时代的 AI。</p>
+      <p>简单来说：<strong>以前的 AI 只会做选择题和填空题</strong>。</p>
 
-      <h2>ChatGPT：让普通人第一次"摸到"AI</h2>
-      <p>2022 年 11 月，OpenAI 发布了 ChatGPT。这是第一次，不懂技术的普通人可以直接跟 AI 对话，而且 AI 的回答居然"像人话"。</p>
-      <p>两个月内，ChatGPT 的用户数突破了 1 亿。之后各大公司纷纷跟进：</p>
+      <h2>ChatGPT 开始：AI 会做应用题、写作文了</h2>
+      <p>2022 年 11 月，OpenAI 发布了 ChatGPT。它和以前的 AI 完全不同——</p>
+      <p>ChatGPT 不是根据设定好的问题集来回答，而是通过学习互联网上的海量信息，训练出了一个类似<strong>大学生一样的通才</strong>。它能够自己组织语言，自己生成句子，真正像一个人一样和你对话。</p>
+      <p><strong>简单来说：从 ChatGPT 开始，AI 会做应用题了，能写作文了。</strong></p>
+
+      <div class="chapter-compare">
+        <div class="compare-item compare-old">
+          <div class="compare-label">以前的 AI</div>
+          <p>只会做<strong>选择题</strong>和<strong>填空题</strong><br>提前设定好答案，没设定的就不会<br>换个说法就听不懂</p>
+        </div>
+        <div class="compare-vs">→</div>
+        <div class="compare-item compare-new">
+          <div class="compare-label">ChatGPT 之后的 AI</div>
+          <p>会做<strong>应用题</strong>，能<strong>写作文</strong><br>学习了互联网海量信息，自己生成回答<br>像一个通才大学生一样和你对话</p>
+        </div>
+      </div>
+
+      <h2>然后所有公司都跟上了</h2>
+      <p>ChatGPT 火了之后，全世界的科技公司都开始做自己的 AI：</p>
       <div class="chapter-table">
         <table>
           <thead><tr><th>公司</th><th>产品</th><th>你可能在哪里见过</th></tr></thead>
@@ -99,33 +110,395 @@
             <tr><td>OpenAI</td><td>ChatGPT</td><td>最早火起来的</td></tr>
             <tr><td>Google</td><td>Gemini</td><td>Google 搜索里的 AI 回答</td></tr>
             <tr><td>Anthropic</td><td>Claude</td><td>很多人觉得写东西最好的</td></tr>
-            <tr><td>百度</td><td>文心一言</td><td>国内最早一批</td></tr>
             <tr><td>字节跳动</td><td>豆包</td><td>抖音系的 AI 助手</td></tr>
             <tr><td>阿里</td><td>通义千问</td><td>淘宝、钉钉里的 AI</td></tr>
             <tr><td>DeepSeek</td><td>DeepSeek</td><td>又便宜又好用的黑马</td></tr>
           </tbody>
         </table>
       </div>
-
-      <h2>所以，现在是什么阶段？</h2>
-      <p>打个比方：现在的 AI 相当于 <strong>2010 年的智能手机</strong>。</p>
-      <p>iPhone 已经出来了（ChatGPT），各种品牌也出来了（各家大模型），但大多数人还在观望，不太知道怎么用，觉得"好像挺厉害但跟我没关系"。</p>
-      <p>但回想一下：到了 2015 年，你能想象没有手机支付、没有外卖 App 的生活吗？</p>
-      <p><strong>AI 大概率也会走这条路。</strong>不是让你焦虑，而是说——现在了解一下，总比后面被动好。</p>
+      <p>所以你看到的豆包、元宝、千问这些，本质上都是 ChatGPT 引发的这波浪潮的产物。</p>
 
       <div class="chapter-callout">
         <strong>这一章的重点</strong>
         <ul>
-          <li>AI 不是突然出现的，是技术积累到了爆发点</li>
-          <li>ChatGPT 让普通人第一次能直接用上 AI</li>
-          <li>现在的 AI 相当于 2010 年的智能手机，还在早期</li>
+          <li>2022 年 11 月 ChatGPT 发布，引发了整个 AI 浪潮</li>
+          <li>以前的 AI 只会做选择题——根据设定好的答案回答</li>
+          <li>现在的 AI 会做应用题——像个通才大学生，能自己组织语言和你对话</li>
+          <li>豆包、千问这些都是这波浪潮的产物</li>
         </ul>
       </div>
     </article>
 
-    <!-- Chapter 2: 为什么 OpenClaw 忽然火了 -->
+    <!-- Chapter 2: 了解一下 AI 现在常见的黑话 -->
     <article class="chapter" id="ch2">
       <div class="chapter-label">第二章</div>
+      <h1>了解一下 AI 现在常见的黑话</h1>
+      <p class="chapter-lead">你不需要懂算法、不需要懂编程。但下面这几个词搞清楚了，后面看任何 AI 相关的东西都不会懵。</p>
+
+      <p>为了让你一次性搞懂所有概念，我们用<strong>一个连贯的比喻</strong>来串起来：</p>
+
+      <div class="chapter-callout callout-info">
+        <strong>🎓 一个比喻贯穿全章</strong>
+        <p style="margin:8px 0 0;">想象你雇了一个<strong>刚毕业的研究生</strong>。他学习能力很强，什么都懂一点，能上网查资料，也能跟你正常对话沟通。</p>
+        <p style="margin:8px 0 0;">AI 的世界，就是围绕这个"研究生"展开的。</p>
+      </div>
+
+      <!-- 全景图 -->
+      <h2>先看全景：所有概念怎么拼在一起</h2>
+      <p>下面这张图展示了所有术语之间的关系。看不懂没关系，后面一个一个讲。</p>
+
+      <div class="diagram-wrapper">
+        <svg viewBox="0 0 720 500" xmlns="http://www.w3.org/2000/svg" class="concept-diagram">
+          <rect width="720" height="500" rx="16" fill="#fafafa" stroke="#e0e0e0"/>
+
+          <!-- You -->
+          <g transform="translate(360,48)">
+            <rect x="-64" y="-26" width="128" height="52" rx="26" fill="#e74c3c" stroke="none"/>
+            <text x="0" y="4" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">👤 你</text>
+          </g>
+          <line x1="360" y1="76" x2="360" y2="108" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowR)"/>
+          <text x="385" y="98" fill="#e74c3c" font-size="11" font-weight="600">交代任务</text>
+
+          <!-- 研究生 (大模型) -->
+          <g transform="translate(360,160)">
+            <rect x="-120" y="-40" width="240" height="80" rx="14" fill="#fff5f5" stroke="#e74c3c" stroke-width="2"/>
+            <text x="0" y="-12" text-anchor="middle" fill="#e74c3c" font-size="14" font-weight="800">🎓 AI 研究生（大模型）</text>
+            <text x="0" y="8" text-anchor="middle" fill="#555" font-size="11">能上网、能对话、学什么会什么</text>
+            <text x="0" y="24" text-anchor="middle" fill="#999" font-size="10">Claude / GPT / DeepSeek / 千问…</text>
+          </g>
+
+          <!-- Token = 工资 -->
+          <g transform="translate(600,160)">
+            <rect x="-72" y="-34" width="144" height="68" rx="12" fill="#fffde7" stroke="#f9a825" stroke-width="1.5"/>
+            <text x="0" y="-8" text-anchor="middle" fill="#e65100" font-size="13" font-weight="700">💰 Token（工资）</text>
+            <text x="0" y="10" text-anchor="middle" fill="#555" font-size="10">干多少活</text>
+            <text x="0" y="24" text-anchor="middle" fill="#555" font-size="10">发多少钱</text>
+          </g>
+          <line x1="482" y1="160" x2="526" y2="160" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+          <!-- 分界线 -->
+          <line x1="40" y1="240" x2="680" y2="240" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="6,4"/>
+          <text x="360" y="258" text-anchor="middle" fill="#999" font-size="11">▼ 只给他聊天窗口？还是给他一台电脑？</text>
+
+          <!-- 左：豆包等 -->
+          <g transform="translate(200,340)">
+            <rect x="-140" y="-56" width="280" height="112" rx="14" fill="#f5f5f5" stroke="#ccc" stroke-width="1.5"/>
+            <text x="0" y="-30" text-anchor="middle" fill="#888" font-size="13" font-weight="700">豆包 / 元宝 / 千问</text>
+            <text x="0" y="-6" text-anchor="middle" font-size="28">🎓💬</text>
+            <text x="0" y="20" text-anchor="middle" fill="#888" font-size="11">只给了一个聊天窗口</text>
+            <text x="0" y="36" text-anchor="middle" fill="#aaa" font-size="10">能上网、能对话，但没法帮你操作电脑</text>
+          </g>
+
+          <!-- 右：OpenClaw -->
+          <g transform="translate(520,340)">
+            <rect x="-140" y="-56" width="280" height="112" rx="14" fill="#fff5f5" stroke="#e74c3c" stroke-width="2"/>
+            <text x="0" y="-30" text-anchor="middle" fill="#e74c3c" font-size="13" font-weight="800">OpenClaw</text>
+            <text x="-24" y="-2" text-anchor="middle" font-size="28">🎓</text>
+            <text x="0" y="-2" text-anchor="middle" font-size="14" fill="#e74c3c" font-weight="700">+</text>
+            <text x="24" y="-2" text-anchor="middle" font-size="28">💻</text>
+            <text x="0" y="20" text-anchor="middle" fill="#e74c3c" font-size="11" font-weight="600">给了一台电脑</text>
+            <text x="0" y="36" text-anchor="middle" fill="#c0392b" font-size="10">能像真人一样操作电脑、帮你完成各种任务</text>
+          </g>
+
+          <!-- Arrows from 研究生 down -->
+          <line x1="300" y1="202" x2="220" y2="282" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+          <line x1="420" y1="202" x2="500" y2="282" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrowR)"/>
+
+          <!-- Skills 标注 -->
+          <g transform="translate(120,160)">
+            <rect x="-72" y="-34" width="144" height="68" rx="12" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
+            <text x="0" y="-8" text-anchor="middle" fill="#2e7d32" font-size="13" font-weight="700">🛠 Skills（技能）</text>
+            <text x="0" y="10" text-anchor="middle" fill="#555" font-size="10">通才，什么都能学</text>
+            <text x="0" y="24" text-anchor="middle" fill="#555" font-size="10">需要时学特定技能</text>
+          </g>
+          <line x1="194" y1="160" x2="238" y2="160" stroke="#43a047" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+          <defs>
+            <marker id="arrowR" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#e74c3c"/></marker>
+            <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#ccc"/></marker>
+          </defs>
+        </svg>
+      </div>
+      <p style="text-align:center;font-size:13px;color:#999;margin-top:8px;">▲ 所有术语之间的关系全景图</p>
+
+      <!-- 大模型 -->
+      <h2>🎓 大模型 = 一个刚毕业的研究生</h2>
+      <p>你可以把 AI 大模型想象成一个<strong>刚毕业的研究生</strong>——他学习能力很强，读过海量的书、论文、网页，什么都懂一点。他能自己上网查资料，也能跟你正常对话，基本可以按照你的要求给你回答问题。</p>
+      <p>但就像研究生有名校和普校之分一样，不同"大模型"也有好坏之别：</p>
+      <div class="diagram-wrapper">
+        <svg viewBox="0 0 660 170" xmlns="http://www.w3.org/2000/svg" class="concept-diagram">
+          <rect width="660" height="170" rx="12" fill="#fafafa" stroke="#e0e0e0"/>
+          <text x="330" y="28" text-anchor="middle" fill="#555" font-size="12">🎓 市场上有很多"研究生"可以选，能力和要价各不相同：</text>
+          <!-- Claude -->
+          <g transform="translate(90,100)">
+            <rect x="-65" y="-38" width="130" height="76" rx="10" fill="#fff5f5" stroke="#e74c3c" stroke-width="1.5"/>
+            <text x="0" y="-16" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="700">Claude</text>
+            <text x="0" y="2" text-anchor="middle" fill="#888" font-size="10">写东西、分析文档特别好</text>
+            <text x="0" y="18" text-anchor="middle" fill="#888" font-size="10">像文科尖子生</text>
+          </g>
+          <!-- GPT -->
+          <g transform="translate(250,100)">
+            <rect x="-65" y="-38" width="130" height="76" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
+            <text x="0" y="-16" text-anchor="middle" fill="#2e7d32" font-size="12" font-weight="700">GPT</text>
+            <text x="0" y="2" text-anchor="middle" fill="#888" font-size="10">综合能力强，啥都行</text>
+            <text x="0" y="18" text-anchor="middle" fill="#888" font-size="10">像全能型选手</text>
+          </g>
+          <!-- DeepSeek -->
+          <g transform="translate(410,100)">
+            <rect x="-65" y="-38" width="130" height="76" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+            <text x="0" y="-16" text-anchor="middle" fill="#1565c0" font-size="12" font-weight="700">DeepSeek</text>
+            <text x="0" y="2" text-anchor="middle" fill="#888" font-size="10">便宜又好用，写代码强</text>
+            <text x="0" y="18" text-anchor="middle" fill="#888" font-size="10">像性价比之王</text>
+          </g>
+          <!-- Local -->
+          <g transform="translate(570,100)">
+            <rect x="-65" y="-38" width="130" height="76" rx="10" fill="#fffde7" stroke="#f9a825" stroke-width="1.5"/>
+            <text x="0" y="-16" text-anchor="middle" fill="#e65100" font-size="12" font-weight="700">本地模型</text>
+            <text x="0" y="2" text-anchor="middle" fill="#888" font-size="10">在你自己电脑上跑</text>
+            <text x="0" y="18" text-anchor="middle" fill="#888" font-size="10">像免费的实习生</text>
+          </g>
+        </svg>
+      </div>
+      <p>重要的是：<strong>你随时可以换人</strong>。用了 Claude 觉得贵，可以换 DeepSeek；想省钱，就用本地模型。OpenClaw 不绑定任何一个研究生。</p>
+
+      <!-- Token -->
+      <h2>💰 Token = 给研究生发的工资</h2>
+      <p>研究生不是白干的，要发工资。但不是月薪，而是<strong>按量计费</strong>——他帮你处理了多少文字，你就付多少钱。</p>
+      <p>这个计量单位叫 <strong>Token</strong>，大致等于文字数量：</p>
+      <div class="chapter-callout callout-info">
+        <strong>1 个汉字 ≈ 1-2 个 Token</strong><br>
+        一篇 1000 字的文章 ≈ 1500 个 Token<br>
+        1 百万 Token ≈ 一本普通小说的长度
+      </div>
+      <p>不同研究生的"工资"差距很大：</p>
+      <div class="diagram-wrapper">
+        <svg viewBox="0 0 660 150" xmlns="http://www.w3.org/2000/svg" class="concept-diagram">
+          <rect width="660" height="150" rx="12" fill="#fafafa" stroke="#e0e0e0"/>
+          <text x="330" y="28" text-anchor="middle" fill="#555" font-size="12">💰 处理一本小说（100 万字）的价格对比：</text>
+          <line x1="60" y1="90" x2="600" y2="90" stroke="#e0e0e0" stroke-width="2"/>
+          <g transform="translate(80,70)">
+            <rect x="-36" y="-24" width="72" height="48" rx="8" fill="#fffde7" stroke="#f9a825" stroke-width="1"/>
+            <text x="0" y="-4" text-anchor="middle" fill="#e65100" font-size="10" font-weight="700">本地模型</text>
+            <text x="0" y="12" text-anchor="middle" fill="#e65100" font-size="11" font-weight="700">¥0</text>
+          </g>
+          <g transform="translate(180,70)">
+            <rect x="-42" y="-24" width="84" height="48" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="1"/>
+            <text x="0" y="-4" text-anchor="middle" fill="#1565c0" font-size="10" font-weight="700">DeepSeek</text>
+            <text x="0" y="12" text-anchor="middle" fill="#1565c0" font-size="11" font-weight="700">¥2</text>
+          </g>
+          <g transform="translate(330,70)">
+            <rect x="-36" y="-24" width="72" height="48" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+            <text x="0" y="-4" text-anchor="middle" fill="#2e7d32" font-size="10" font-weight="700">GPT-4o</text>
+            <text x="0" y="12" text-anchor="middle" fill="#2e7d32" font-size="11" font-weight="700">¥15</text>
+          </g>
+          <g transform="translate(440,70)">
+            <rect x="-40" y="-24" width="80" height="48" rx="8" fill="#fff5f5" stroke="#e74c3c" stroke-width="1"/>
+            <text x="0" y="-4" text-anchor="middle" fill="#e74c3c" font-size="10" font-weight="700">Sonnet</text>
+            <text x="0" y="12" text-anchor="middle" fill="#c0392b" font-size="11" font-weight="700">¥20</text>
+          </g>
+          <g transform="translate(570,70)">
+            <rect x="-40" y="-24" width="80" height="48" rx="8" fill="#fff5f5" stroke="#e74c3c" stroke-width="1"/>
+            <text x="0" y="-4" text-anchor="middle" fill="#e74c3c" font-size="10" font-weight="700">Opus</text>
+            <text x="0" y="12" text-anchor="middle" fill="#c0392b" font-size="11" font-weight="700">¥100+</text>
+          </g>
+          <text x="80" y="130" text-anchor="middle" fill="#999" font-size="10">← 便宜</text>
+          <text x="570" y="130" text-anchor="middle" fill="#999" font-size="10">贵 →</text>
+        </svg>
+      </div>
+      <p>日常轻度使用，一个月大概花 ¥30-100。简单任务用便宜的研究生，重要任务换贵的来做——混合使用，最省钱。</p>
+
+      <!-- Skills -->
+      <h2>🛠 Skills = 研究生的技能</h2>
+      <p>这位 AI 研究生是个<strong>通才</strong>——什么都会一点，什么都可以学。</p>
+      <p>当你有具体明确的问题需要他解决的时候，就可以让他去<strong>学习特定的技能（Skills）</strong>，这样他能把你想要的事情做得更好、更专业。</p>
+      <div class="diagram-wrapper">
+        <svg viewBox="0 0 660 200" xmlns="http://www.w3.org/2000/svg" class="concept-diagram">
+          <rect width="660" height="200" rx="12" fill="#fafafa" stroke="#e0e0e0"/>
+          <!-- 研究生中心 -->
+          <g transform="translate(330,100)">
+            <circle r="40" fill="#fff5f5" stroke="#e74c3c" stroke-width="2"/>
+            <text x="0" y="-6" text-anchor="middle" font-size="26">🎓</text>
+            <text x="0" y="14" text-anchor="middle" fill="#e74c3c" font-size="9" font-weight="700">通才研究生</text>
+          </g>
+          <!-- Skills around -->
+          <g transform="translate(100,50)">
+            <rect x="-60" y="-22" width="120" height="44" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+            <text x="0" y="4" text-anchor="middle" fill="#2e7d32" font-size="11" font-weight="600">📧 写邮件、发邮件</text>
+          </g>
+          <line x1="162" y1="54" x2="292" y2="82" stroke="#43a047" stroke-width="1" stroke-dasharray="3,3"/>
+          <g transform="translate(100,150)">
+            <rect x="-60" y="-22" width="120" height="44" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+            <text x="0" y="4" text-anchor="middle" fill="#2e7d32" font-size="11" font-weight="600">📊 整理 Excel</text>
+          </g>
+          <line x1="162" y1="148" x2="292" y2="118" stroke="#43a047" stroke-width="1" stroke-dasharray="3,3"/>
+          <g transform="translate(560,50)">
+            <rect x="-60" y="-22" width="120" height="44" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+            <text x="0" y="4" text-anchor="middle" fill="#2e7d32" font-size="11" font-weight="600">📝 写合同、审文件</text>
+          </g>
+          <line x1="498" y1="54" x2="368" y2="82" stroke="#43a047" stroke-width="1" stroke-dasharray="3,3"/>
+          <g transform="translate(560,150)">
+            <rect x="-60" y="-22" width="120" height="44" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+            <text x="0" y="4" text-anchor="middle" fill="#2e7d32" font-size="11" font-weight="600">🔍 搜信息、做调研</text>
+          </g>
+          <line x1="498" y1="148" x2="368" y2="118" stroke="#43a047" stroke-width="1" stroke-dasharray="3,3"/>
+        </svg>
+      </div>
+      <p>OpenClaw 社区有大量现成的 Skills 可以安装，就像给研究生报培训班——<strong>技能越多，能帮你干的事就越多</strong>。</p>
+
+      <!-- 豆包 vs OpenClaw -->
+      <h2>💬 豆包/千问 vs 🖥️ OpenClaw：差别在哪？</h2>
+      <p>理解了"研究生"之后，这个区别就很好懂了：</p>
+      <div class="diagram-wrapper">
+        <svg viewBox="0 0 660 240" xmlns="http://www.w3.org/2000/svg" class="concept-diagram">
+          <rect width="660" height="240" rx="12" fill="#fafafa" stroke="#e0e0e0"/>
+          <!-- 左：豆包 -->
+          <g transform="translate(180,120)">
+            <rect x="-148" y="-80" width="296" height="160" rx="14" fill="#f5f5f5" stroke="#ccc" stroke-width="1.5"/>
+            <text x="0" y="-54" text-anchor="middle" fill="#888" font-size="13" font-weight="700">豆包 / 元宝 / 千问</text>
+            <text x="-40" y="-10" text-anchor="middle" font-size="36">🎓</text>
+            <text x="20" y="-10" text-anchor="middle" font-size="36">💬</text>
+            <text x="0" y="26" text-anchor="middle" fill="#555" font-size="12">研究生 + 一个聊天窗口</text>
+            <text x="0" y="46" text-anchor="middle" fill="#888" font-size="10.5">能上网、能对话、能回答问题</text>
+            <text x="0" y="62" text-anchor="middle" fill="#aaa" font-size="10.5">但没法帮你操作电脑上的任何东西</text>
+          </g>
+          <!-- 右：OpenClaw -->
+          <g transform="translate(490,120)">
+            <rect x="-138" y="-80" width="276" height="160" rx="14" fill="#fff5f5" stroke="#e74c3c" stroke-width="2"/>
+            <text x="0" y="-54" text-anchor="middle" fill="#e74c3c" font-size="13" font-weight="800">OpenClaw</text>
+            <text x="-40" y="-10" text-anchor="middle" font-size="36">🎓</text>
+            <text x="0" y="-14" text-anchor="middle" font-size="16" fill="#e74c3c" font-weight="700">+</text>
+            <text x="40" y="-10" text-anchor="middle" font-size="36">💻</text>
+            <text x="0" y="26" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="600">研究生 + 一台电脑</text>
+            <text x="0" y="46" text-anchor="middle" fill="#555" font-size="10.5">能像真人一样操作电脑</text>
+            <text x="0" y="62" text-anchor="middle" fill="#c0392b" font-size="10.5">发邮件、整理文件、搜信息、填表格…</text>
+          </g>
+        </svg>
+      </div>
+      <p><strong>豆包、元宝、千问</strong>这些，就是一个只能上网、只能和你聊天的研究生。你问他问题他能答，但让他帮你发个邮件？他做不到。</p>
+      <p><strong>OpenClaw</strong> 呢，就是你<strong>给这个研究生一台电脑</strong>。你可以把你自己的电脑给他用，也可以另外租一台专门给他。这样他就可以像真人一样操作电脑，帮你去完成电脑上的各种操作。</p>
+
+      <!-- API Key -->
+      <h2>🔑 API Key = 研究生的「上岗证」</h2>
+      <p>你选好了要雇哪个研究生（比如 Claude），就得去他所在的"学校"（Anthropic 公司）办一张<strong>上岗证</strong>。有了这张证，研究生才能正式来给你干活。</p>
+      <p>这张上岗证就是 <strong>API Key</strong>——一串密码，OpenClaw 拿着它去调用研究生的能力，同时通过它来计费发工资。</p>
+      <div class="diagram-wrapper">
+        <svg viewBox="0 0 660 120" xmlns="http://www.w3.org/2000/svg" class="concept-diagram">
+          <rect width="660" height="120" rx="12" fill="#fafafa" stroke="#e0e0e0"/>
+          <g transform="translate(130,60)">
+            <rect x="-100" y="-32" width="200" height="64" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+            <text x="0" y="-8" text-anchor="middle" fill="#1565c0" font-size="12" font-weight="700">🏫 研究生的学校（如 Anthropic）</text>
+            <text x="0" y="12" text-anchor="middle" fill="#888" font-size="11">注册后给你一张 API Key</text>
+          </g>
+          <g transform="translate(330,60)">
+            <text x="0" y="0" text-anchor="middle" font-size="24">🔑</text>
+            <text x="0" y="22" text-anchor="middle" fill="#1565c0" font-size="10">sk-xxxxx</text>
+          </g>
+          <line x1="232" y1="60" x2="308" y2="60" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrowB)"/>
+          <line x1="352" y1="60" x2="428" y2="60" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrowB)"/>
+          <g transform="translate(530,60)">
+            <rect x="-100" y="-32" width="200" height="64" rx="10" fill="#fff5f5" stroke="#e74c3c" stroke-width="1.5"/>
+            <text x="0" y="-8" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="700">💻 OpenClaw（你给他的电脑）</text>
+            <text x="0" y="12" text-anchor="middle" fill="#888" font-size="11">拿着 Key 让研究生上岗干活</text>
+          </g>
+          <defs>
+            <marker id="arrowB" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1976d2"/></marker>
+          </defs>
+        </svg>
+      </div>
+      <p>部署 OpenClaw 的时候，只需要去对应公司网站注册 → 获取 API Key → 填进去，研究生就上岗了。</p>
+
+      <!-- Prompt -->
+      <h2>💬 Prompt = 你交代给研究生的话</h2>
+      <p>你可能听过"写 Prompt""Prompt 工程师"之类的说法。其实就是<strong>你给研究生交代任务时说的话</strong>。</p>
+      <p>就像你跟真人交代工作一样——说得越清楚，他做得越好：</p>
+      <div class="chapter-compare">
+        <div class="compare-item compare-old">
+          <div class="compare-label">模糊的交代（差 Prompt）</div>
+          <p>"帮我写个东西"<br>→ 研究生不知道写什么，随便交了一篇</p>
+        </div>
+        <div class="compare-vs">→</div>
+        <div class="compare-item compare-new">
+          <div class="compare-label">清楚的交代（好 Prompt）</div>
+          <p>"帮我写一封给客户的道歉邮件，因为发货延迟了 3 天，语气诚恳但专业"<br>→ 研究生交出一封完美的邮件</p>
+        </div>
+      </div>
+
+      <!-- 开源 -->
+      <h2>📖 开源 = 这个研究生的"培养方案"是公开的</h2>
+      <p>OpenClaw 是开源的，意思是它的全部代码（相当于研究生的"培养方案"和"工作手册"）都是公开的，任何人都可以看、可以用、可以改。</p>
+      <p>这意味着：</p>
+      <ul class="chapter-list">
+        <li><strong>免费</strong>——OpenClaw 本身不要钱（研究生工资另算）</li>
+        <li><strong>透明</strong>——代码公开，没法偷偷搜集你的数据</li>
+        <li><strong>可控</strong>——不满意可以自己改，或者用别人改好的版本</li>
+        <li><strong>不会被卡脖子</strong>——不依赖某一家公司</li>
+      </ul>
+
+      <!-- 总结 -->
+      <h2>串起来再看一遍</h2>
+      <div class="diagram-wrapper">
+        <svg viewBox="0 0 660 260" xmlns="http://www.w3.org/2000/svg" class="concept-diagram">
+          <rect width="660" height="260" rx="12" fill="#fafafa" stroke="#e0e0e0"/>
+          <text x="330" y="30" text-anchor="middle" fill="#333" font-size="14" font-weight="700">整个流程就是这样的：</text>
+
+          <g transform="translate(80,80)"><circle r="28" fill="#e74c3c"/><text x="0" y="2" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">1</text></g>
+          <text x="80" y="125" text-anchor="middle" fill="#333" font-size="11" font-weight="600">你</text>
+          <text x="80" y="140" text-anchor="middle" fill="#888" font-size="10">用 Prompt</text>
+          <text x="80" y="154" text-anchor="middle" fill="#888" font-size="10">交代任务</text>
+          <line x1="110" y1="80" x2="168" y2="80" stroke="#e74c3c" stroke-width="2" marker-end="url(#aR)"/>
+
+          <g transform="translate(200,80)"><circle r="28" fill="#e74c3c"/><text x="0" y="2" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">2</text></g>
+          <text x="200" y="125" text-anchor="middle" fill="#333" font-size="11" font-weight="600">OpenClaw</text>
+          <text x="200" y="140" text-anchor="middle" fill="#888" font-size="10">给研究生的电脑</text>
+          <text x="200" y="154" text-anchor="middle" fill="#888" font-size="10">接收你的任务</text>
+          <line x1="230" y1="80" x2="288" y2="80" stroke="#e74c3c" stroke-width="2" marker-end="url(#aR)"/>
+
+          <g transform="translate(320,80)"><circle r="28" fill="#1976d2"/><text x="0" y="2" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">3</text></g>
+          <text x="320" y="125" text-anchor="middle" fill="#333" font-size="11" font-weight="600">研究生思考</text>
+          <text x="320" y="140" text-anchor="middle" fill="#888" font-size="10">用 API Key 上岗</text>
+          <text x="320" y="154" text-anchor="middle" fill="#888" font-size="10">消耗 Token 工资</text>
+          <line x1="350" y1="80" x2="418" y2="80" stroke="#1976d2" stroke-width="2" marker-end="url(#aB)"/>
+
+          <g transform="translate(450,80)"><circle r="28" fill="#43a047"/><text x="0" y="2" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">4</text></g>
+          <text x="450" y="125" text-anchor="middle" fill="#333" font-size="11" font-weight="600">用 Skills 干活</text>
+          <text x="450" y="140" text-anchor="middle" fill="#888" font-size="10">操作电脑</text>
+          <text x="450" y="154" text-anchor="middle" fill="#888" font-size="10">完成具体任务</text>
+          <line x1="480" y1="80" x2="548" y2="80" stroke="#43a047" stroke-width="2" marker-end="url(#aG)"/>
+
+          <g transform="translate(580,80)"><circle r="28" fill="#2e7d32"/><text x="0" y="2" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">5</text></g>
+          <text x="580" y="125" text-anchor="middle" fill="#333" font-size="11" font-weight="600">完成！</text>
+          <text x="580" y="140" text-anchor="middle" fill="#888" font-size="10">结果交给你</text>
+
+          <rect x="30" y="175" width="600" height="60" rx="10" fill="#fff5f5" stroke="#e74c3c" stroke-width="1"/>
+          <text x="330" y="198" text-anchor="middle" fill="#333" font-size="12" font-weight="700">用研究生的话来说就是：</text>
+          <text x="330" y="218" text-anchor="middle" fill="#555" font-size="11">你交代任务 → 研究生坐到电脑前（OpenClaw）→ 动脑思考（大模型，付工资 Token）→ 用技能（Skills）操作电脑 → 搞定！</text>
+
+          <defs>
+            <marker id="aR" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#e74c3c"/></marker>
+            <marker id="aB" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1976d2"/></marker>
+            <marker id="aG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#43a047"/></marker>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="chapter-callout">
+        <strong>这一章的重点（用研究生比喻记住）</strong>
+        <ul>
+          <li><strong>大模型</strong> = 一个刚毕业的研究生（Claude / GPT / DeepSeek，各有特长）</li>
+          <li><strong>Token</strong> = 给研究生发的工资（干多少活付多少钱）</li>
+          <li><strong>Skills</strong> = 研究生的技能（通才，什么都能学，学了就做得更好）</li>
+          <li><strong>豆包/千问</strong> = 只给了研究生一个聊天窗口（能问答，不能操作电脑）</li>
+          <li><strong>OpenClaw</strong> = 给研究生一台电脑（能像真人一样帮你操作电脑做事）</li>
+          <li><strong>API Key</strong> = 研究生的上岗证（去学校注册拿到，才能正式干活）</li>
+          <li><strong>Prompt</strong> = 你交代给研究生的话（说得越清楚，活干得越好）</li>
+          <li><strong>开源</strong> = 培养方案公开（免费、透明、可控）</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Chapter 3: 为什么 OpenClaw 忽然火了 -->
+    <article class="chapter" id="ch3">
+      <div class="chapter-label">第三章</div>
       <h1>为什么 OpenClaw 忽然火了？</h1>
       <p class="chapter-lead">GitHub 上 24 万星标，几万个分支版本，中国大厂纷纷推出自己的版本。凭什么？</p>
 
@@ -185,105 +558,6 @@
           <li>和 ChatGPT 的核心区别：不只是聊天，能真正帮你干活</li>
           <li>免费开源 + 自由选模型 + 隐私可控 = 受欢迎的原因</li>
           <li>国内大厂都有自己的定制版，可能更适合中国用户</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- Chapter 3: 常见术语 -->
-    <article class="chapter" id="ch3">
-      <div class="chapter-label">第三章</div>
-      <h1>常见的一些术语到底什么意思？</h1>
-      <p class="chapter-lead">你不需要懂算法、不需要懂编程。但下面这几个词搞清楚了，后面看任何 AI 相关的东西都不会懵。</p>
-
-      <h2>大模型 = AI 的"大脑"</h2>
-      <p>你听到的 ChatGPT、Claude、DeepSeek，这些其实都是"大模型"——你可以理解为不同公司训练出来的<strong>"AI 大脑"</strong>。</p>
-      <p>就像手机有华为、苹果、小米，AI 大脑也有不同品牌。每个品牌的大脑有不同特点：</p>
-      <ul class="chapter-list">
-        <li><strong>Claude</strong>——写东西、分析文档特别好</li>
-        <li><strong>GPT</strong>——综合能力强，啥都能干</li>
-        <li><strong>DeepSeek</strong>——又便宜又好用，写代码很强</li>
-        <li><strong>豆包/千问</strong>——中文好，国内用起来方便</li>
-      </ul>
-      <p>记住一点就行：<strong>大模型 = AI 的大脑，不同品牌各有特长。</strong></p>
-
-      <h2>Token = AI 收费的"字数"</h2>
-      <p>AI 不是按"次"收费的，而是按处理了多少文字来收费。这个计量单位叫 <strong>Token</strong>。</p>
-      <p>大致可以理解为：</p>
-      <div class="chapter-callout callout-info">
-        <strong>1 个汉字 ≈ 1-2 个 Token</strong><br>
-        一篇 1000 字的文章 ≈ 1500 个 Token<br>
-        1 百万 Token ≈ 一本普通小说的长度
-      </div>
-      <p>不同的大模型价格差异很大。以处理 100 万个 Token（约一本小说）为例：</p>
-      <div class="chapter-table">
-        <table>
-          <thead><tr><th>模型</th><th>价格（约）</th><th>类比</th></tr></thead>
-          <tbody>
-            <tr><td>Claude Opus（最贵）</td><td>¥100+</td><td>请了个资深顾问</td></tr>
-            <tr><td>Claude Sonnet（主流）</td><td>¥20</td><td>请了个靠谱助理</td></tr>
-            <tr><td>GPT-4o</td><td>¥15</td><td>也是靠谱助理</td></tr>
-            <tr><td>DeepSeek V3（便宜）</td><td>¥2</td><td>实习生价格，但活干得不错</td></tr>
-            <tr><td>本地模型（免费）</td><td>¥0</td><td>自己家电脑跑，不花钱</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>日常轻度使用，一个月大概花 ¥30-100。如果用便宜模型或本地模型，可以做到接近零成本。</p>
-
-      <h2>AI Agent = 能帮你干活的 AI</h2>
-      <p>前面说了，ChatGPT、豆包这些是<strong>"问答"</strong>——你问一句它答一句。</p>
-      <p><strong>AI Agent</strong>（AI 代理）在大脑的基础上加了"手脚"——让 AI 不只是说，还能<strong>做</strong>。OpenClaw 就是目前最火的 AI Agent。</p>
-      <div class="chapter-compare">
-        <div class="compare-item compare-old">
-          <div class="compare-label">普通 AI（聊天机器人）</div>
-          <p>你："帮我写封请假邮件"<br>AI："好的，这是邮件内容……（你自己复制粘贴去发）"</p>
-        </div>
-        <div class="compare-vs">→</div>
-        <div class="compare-item compare-new">
-          <div class="compare-label">AI Agent（OpenClaw）</div>
-          <p>你："帮我写封请假邮件发给老板"<br>AI：<strong>（直接写好并发出去了）</strong>"已经发送完毕。"</p>
-        </div>
-      </div>
-
-      <h2>开源 = 代码公开，免费用</h2>
-      <p>"开源"的意思很简单：软件的代码是公开的，任何人都可以看、可以用、可以改。</p>
-      <p>为什么这对你很重要？</p>
-      <ul class="chapter-list">
-        <li><strong>免费</strong>——不用花钱买软件本身</li>
-        <li><strong>透明</strong>——代码公开，没法偷偷搜集你的数据</li>
-        <li><strong>可控</strong>——不满意可以自己改，或者用别人改好的版本</li>
-        <li><strong>不会被卡脖子</strong>——不依赖某一家公司，它倒闭了你也能继续用</li>
-      </ul>
-
-      <h2>Prompt = 你对 AI 说的话</h2>
-      <p>你可能听过"写 prompt""prompt 工程师"之类的说法。</p>
-      <p>其实 Prompt 就是<strong>你输入给 AI 的文字</strong>。你打的每一句话、每一个指令，都是 Prompt。</p>
-      <p>写得越清楚，AI 的回答就越好。这就像你跟人交代事情一样——说得模糊就做得模糊，说得详细就做得到位。</p>
-      <div class="chapter-compare">
-        <div class="compare-item compare-old">
-          <div class="compare-label">模糊的 Prompt</div>
-          <p>"帮我写个东西"<br>→ AI 不知道写什么，随便给你糊一篇</p>
-        </div>
-        <div class="compare-vs">→</div>
-        <div class="compare-item compare-new">
-          <div class="compare-label">清楚的 Prompt</div>
-          <p>"帮我写一封给客户的道歉邮件，因为发货延迟了 3 天，语气诚恳但专业"<br>→ AI 给你一封非常贴合的邮件</p>
-        </div>
-      </div>
-
-      <h2>API = 软件之间的"对接口"</h2>
-      <p>你可能会在部署 OpenClaw 的时候遇到"API Key"这个词。</p>
-      <p>API 就是<strong>两个软件之间沟通用的接口</strong>。OpenClaw 需要通过 API 去调用大模型的能力。而 API Key 就是你的"通行证"——大模型公司给你一串密码，OpenClaw 拿着这个密码去调用它的服务。</p>
-      <p>就像你家的 WiFi 密码——有了密码才能上网，有了 API Key，OpenClaw 才能调动 AI 大脑。</p>
-
-      <div class="chapter-callout">
-        <strong>这一章的重点</strong>
-        <ul>
-          <li><strong>大模型</strong> = AI 的大脑，不同品牌各有特长</li>
-          <li><strong>Token</strong> = AI 收费的计量单位，约等于字数</li>
-          <li><strong>AI Agent</strong> = 能真正帮你干活的 AI，不只是聊天</li>
-          <li><strong>开源</strong> = 免费、透明、可控</li>
-          <li><strong>Prompt</strong> = 你对 AI 说的话，说得越清楚效果越好</li>
-          <li><strong>API / API Key</strong> = 软件之间的对接口 / 你的通行证</li>
         </ul>
       </div>
     </article>
