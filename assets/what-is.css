@@ -1,0 +1,171 @@
+/* ===== Choice Page ===== */
+.choice-page {
+  padding: 140px 0 80px;
+  min-height: calc(100vh - 100px);
+  display: flex; align-items: center;
+}
+.choice-page h1 {
+  font-size: 36px; font-weight: 800; text-align: center; margin-bottom: 12px;
+}
+.choice-desc {
+  text-align: center; font-size: 16px; color: var(--c-text-secondary); margin-bottom: 48px;
+}
+
+.choice-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+  max-width: 860px; margin: 0 auto;
+}
+.choice-card {
+  display: flex; flex-direction: column; padding: 40px 36px;
+  background: var(--c-bg-alt); border-radius: var(--radius);
+  border: 2px solid var(--c-border); text-decoration: none; color: var(--c-text);
+  transition: all var(--transition);
+}
+.choice-card:hover {
+  border-color: var(--c-primary); transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(231,76,60,0.12); color: var(--c-text);
+}
+.choice-icon { font-size: 40px; margin-bottom: 16px; }
+.choice-card h2 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+.choice-subtitle {
+  font-size: 14px; color: var(--c-primary); font-weight: 600; margin-bottom: 20px;
+}
+.choice-detail { flex: 1; }
+.choice-detail p {
+  font-size: 14px; color: var(--c-text-secondary); line-height: 1.8; margin-bottom: 12px;
+}
+.choice-detail ul {
+  list-style: none; padding: 0; margin: 0 0 20px;
+}
+.choice-detail ul li {
+  font-size: 14px; color: var(--c-text-secondary); padding: 3px 0 3px 18px;
+  position: relative; line-height: 1.6;
+}
+.choice-detail ul li::before {
+  content: "·"; position: absolute; left: 4px; top: 2px;
+  font-weight: 800; color: var(--c-primary); font-size: 18px;
+}
+.choice-link {
+  font-size: 15px; font-weight: 600; color: var(--c-primary);
+}
+.choice-card:hover .choice-link { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .choice-page { padding: 100px 0 60px; }
+  .choice-page h1 { font-size: 28px; }
+  .choice-grid { grid-template-columns: 1fr; }
+  .choice-card { padding: 28px 24px; }
+}
+
+/* ===== Sub-page Styles ===== */
+
+/* Page Hero (used in ai-basics and use-cases) */
+.page-hero {
+  padding: 120px 0 48px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 50%, #f0f4ff 100%);
+}
+.page-hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
+.page-hero-desc { font-size: 16px; color: var(--c-text-secondary); }
+
+@media (max-width: 768px) {
+  .page-hero { padding: 100px 0 36px; }
+  .page-hero h1 { font-size: 26px; }
+}
+
+/* Topic Cards (ai-basics) */
+.topic-cards { display: flex; flex-direction: column; gap: 20px; }
+.topic-card {
+  display: flex; gap: 28px; padding: 32px;
+  background: var(--c-bg-alt); border-radius: var(--radius);
+  border: 1px solid var(--c-border); text-decoration: none; color: var(--c-text);
+  transition: all var(--transition);
+}
+.topic-card:hover {
+  border-color: var(--c-primary); box-shadow: var(--shadow-hover);
+  transform: translateY(-2px); color: var(--c-text);
+}
+.topic-num {
+  flex-shrink: 0; font-size: 36px; font-weight: 800;
+  color: var(--c-primary); opacity: 0.3; line-height: 1;
+}
+.topic-body { flex: 1; }
+.topic-body h3 { font-size: 19px; margin-bottom: 8px; line-height: 1.4; }
+.topic-body > p { font-size: 14px; color: var(--c-text-secondary); line-height: 1.8; margin-bottom: 12px; }
+.topic-preview {
+  list-style: none; padding: 0; margin: 0 0 16px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.topic-preview li {
+  font-size: 13px; color: var(--c-text-secondary); padding-left: 18px;
+  position: relative; line-height: 1.6;
+}
+.topic-preview li::before {
+  content: "·"; position: absolute; left: 4px; top: 0;
+  font-weight: 800; color: var(--c-primary); font-size: 18px;
+}
+.topic-preview li strong { color: var(--c-text); }
+.topic-link { font-size: 14px; font-weight: 600; color: var(--c-primary); }
+.topic-card:hover .topic-link { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .topic-card { flex-direction: column; gap: 12px; padding: 24px; }
+  .topic-num { font-size: 28px; }
+}
+
+/* Role Tabs (use-cases) */
+.role-tabs {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 8px; margin-bottom: 32px;
+}
+.role-tab {
+  padding: 8px 18px; border-radius: 20px;
+  border: 1px solid var(--c-border); background: var(--c-bg);
+  font-size: 14px; cursor: pointer; transition: all var(--transition);
+  white-space: nowrap;
+}
+.role-tab:hover { border-color: var(--c-primary); color: var(--c-primary); }
+.role-tab.active {
+  background: var(--c-primary); color: #fff; border-color: var(--c-primary);
+}
+
+/* Case Cards */
+.case-content { display: none; }
+.case-content.active { display: block; animation: fadeIn 0.3s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.case-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+}
+.case-card {
+  background: var(--c-bg); border-radius: var(--radius); padding: 28px;
+  border: 1px solid var(--c-border); text-align: left;
+  transition: all var(--transition);
+}
+.case-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.case-tag {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  padding: 3px 10px; border-radius: 4px;
+  background: var(--c-primary-light); color: var(--c-primary);
+  margin-bottom: 10px;
+}
+.case-card h3 { font-size: 16px; margin-bottom: 10px; line-height: 1.4; }
+.case-card p { font-size: 14px; color: var(--c-text-secondary); line-height: 1.8; }
+
+@media (max-width: 768px) {
+  .case-grid { grid-template-columns: 1fr; }
+}
+
+/* Case CTA */
+.case-cta {
+  text-align: center; margin-top: 56px; padding-top: 40px;
+  border-top: 1px solid var(--c-border);
+}
+.case-cta p { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+
+/* Active nav link */
+.nav-active { color: var(--c-primary) !important; font-weight: 600 !important; }

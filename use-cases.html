@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实际场景应用 — 虾逛</title>
+  <meta name="description" content="按职业角色查看 OpenClaw 能帮你解决哪些问题：财务、法务、人事、行政、销售、运营、技术、设计。">
+  <link rel="stylesheet" href="assets/style.css?v=3">
+  <link rel="stylesheet" href="assets/what-is.css?v=3">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">🦐 虾逛</a>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown">
+        <a href="what-is.html" class="nav-active">OpenClaw 能干嘛？</a>
+        <div class="nav-dropdown">
+          <a href="ai-basics.html">基础科普<div class="nav-dropdown-desc">没接触过 AI？从这里开始</div></a>
+          <a href="use-cases.html">实际场景应用<div class="nav-dropdown-desc">看看不同职业怎么用</div></a>
+        </div>
+      </li>
+      <li><a href="index.html#guide">开始使用 OpenClaw</a></li>
+      <li><a href="index.html#versions">各种 OpenClaw 集合对比</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>实际场景应用</h1>
+    <p class="page-hero-desc">选择你的角色，看看 OpenClaw 能帮你做什么。每个案例都是真实可操作的。</p>
+  </div>
+</section>
+
+<!-- Use Cases -->
+<section class="section">
+  <div class="container">
+
+    <!-- Role Tabs -->
+    <div class="role-tabs" id="roleTabs">
+      <button class="role-tab active" data-role="general">🌐 通用/日常</button>
+      <button class="role-tab" data-role="finance">💰 财务</button>
+      <button class="role-tab" data-role="legal">⚖️ 法务</button>
+      <button class="role-tab" data-role="hr">👥 人事</button>
+      <button class="role-tab" data-role="boss">👔 老板/管理层</button>
+      <button class="role-tab" data-role="admin">📋 行政</button>
+      <button class="role-tab" data-role="sales">🤝 销售/商务</button>
+      <button class="role-tab" data-role="marketing">📣 市场/运营</button>
+      <button class="role-tab" data-role="dev">💻 技术/开发</button>
+      <button class="role-tab" data-role="design">🎨 设计</button>
+    </div>
+
+    <!-- General / Daily -->
+    <div class="case-content active" data-role="general">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">信息收集</div>
+          <h3>"帮我调研一下这个话题"</h3>
+          <p>OpenClaw 可以自动搜索、阅读、整理信息，生成结构化的调研报告，比你自己一篇篇看快得多。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">日程管理</div>
+          <h3>"提醒我下周三下午开会"</h3>
+          <p>帮你管理日程、设置提醒、协调会议时间，通过聊天消息就能搞定。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">文档处理</div>
+          <h3>"帮我把这份 PDF 里的表格提取出来"</h3>
+          <p>读取各种格式的文档，提取关键信息、转换格式、整理数据，省去大量重复劳动。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">邮件处理</div>
+          <h3>"帮我回复这封邮件，语气正式一点"</h3>
+          <p>根据邮件内容和你的要求，起草回复邮件，你确认后直接发送。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Finance -->
+    <div class="case-content" data-role="finance">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">报销审批</div>
+          <h3>"帮我检查这批报销单有没有问题"</h3>
+          <p>OpenClaw 可以自动读取报销单据，比对公司报销标准，标记出超标、重复、缺材料的条目，生成审核报告发到你的聊天工具里。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">数据整理</div>
+          <h3>"把这个月的流水按部门分类整理"</h3>
+          <p>给它一份 Excel，它帮你按部门/项目/日期分类汇总，生成透视表，甚至画出图表，直接发回给你。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">发票处理</div>
+          <h3>"这堆发票帮我核对一下税号和金额"</h3>
+          <p>批量核对发票信息，检查税号是否正确、金额是否一致、是否有重复发票，输出异常清单。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">月报生成</div>
+          <h3>"根据这个月的数据帮我写个财务月报"</h3>
+          <p>提供原始数据，OpenClaw 可以自动生成结构化的月报草稿，包含同比环比分析、异常波动提醒。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal -->
+    <div class="case-content" data-role="legal">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">合同审查</div>
+          <h3>"帮我看看这份合同有没有风险条款"</h3>
+          <p>OpenClaw 可以逐条分析合同，标记出不利条款、模糊表述、缺失条款，生成审查意见书。特别适合处理大量标准化合同。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">法规检索</div>
+          <h3>"查一下最新的数据保护法规有什么变化"</h3>
+          <p>自动检索最新法规更新，整理与你公司业务相关的变化点，生成简报发给你。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">文书起草</div>
+          <h3>"帮我起草一份保密协议"</h3>
+          <p>根据你提供的要点和公司模板，生成法律文书初稿。你只需要审核修改，不用从零写起。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">案例检索</div>
+          <h3>"找几个类似的判例给我参考"</h3>
+          <p>搜索相关判例，整理案情摘要、判决要点、适用法条，帮你快速了解司法实践中的倾向。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HR -->
+    <div class="case-content" data-role="hr">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">简历筛选</div>
+          <h3>"这 200 份简历帮我筛选出符合条件的"</h3>
+          <p>OpenClaw 可以根据你设定的条件（学历、经验、技能等），快速筛选简历，生成候选人排名和推荐理由。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">面试安排</div>
+          <h3>"帮我协调这 5 个候选人的面试时间"</h3>
+          <p>自动查看面试官日历，发邀约邮件，处理改期请求，更新面试日程表。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">制度问答</div>
+          <h3>"新员工总问同样的问题，烦死了"</h3>
+          <p>把公司制度手册喂给 OpenClaw，让它变成一个 7×24 小时的 HR 助手，自动回答请假政策、报销流程、福利制度等常见问题。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">员工关怀</div>
+          <h3>"自动提醒我哪些员工快到生日/周年"</h3>
+          <p>定期检查员工信息，提前提醒生日、入职周年、合同到期等关键日期，帮你做好员工关怀。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boss -->
+    <div class="case-content" data-role="boss">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">信息汇总</div>
+          <h3>"每天早上给我发一份今日待办和业务简报"</h3>
+          <p>OpenClaw 可以每天自动汇总你的日程、未读重要邮件、关键业务数据，生成一份简洁的早报发到你微信。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">竞品监控</div>
+          <h3>"帮我盯着竞争对手的动态"</h3>
+          <p>自动监控竞品的新闻、产品更新、招聘动态、社媒内容，有重要变化第一时间通知你。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">会议纪要</div>
+          <h3>"刚才开会的内容帮我整理一下"</h3>
+          <p>把会议录音或笔记发给它，自动整理成结构化的会议纪要，列出决议、待办、负责人，发给参会人。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">数据洞察</div>
+          <h3>"这个月销售数据有什么异常？"</h3>
+          <p>把数据丢给它，自动分析趋势、同环比变化、异常波动，用你看得懂的话给你讲清楚。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin -->
+    <div class="case-content" data-role="admin">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">日程协调</div>
+          <h3>"帮我协调下周的会议室和参会人时间"</h3>
+          <p>OpenClaw 可以查看多人日历，找到共同空闲时间，预订会议室，发送会议邀请。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">采购比价</div>
+          <h3>"这几样办公用品帮我比比价"</h3>
+          <p>自动在多个平台搜索比价，整理成对比表格，标注最优选择和配送时间。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">通知起草</div>
+          <h3>"写个节假日放假通知"</h3>
+          <p>根据你的要求和公司风格，快速起草各种行政通知、公告，格式规范、措辞得体。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">资产管理</div>
+          <h3>"公司固定资产信息帮我整理一下"</h3>
+          <p>整理资产台账、标记即将到期的设备、提醒需要维护的物品，生成资产报告。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sales -->
+    <div class="case-content" data-role="sales">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">客户研究</div>
+          <h3>"帮我调研一下这个客户的背景"</h3>
+          <p>OpenClaw 自动搜索客户公司的公开信息、新闻、财报、招聘动态，生成客户画像，帮你拜访前做好功课。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">跟进提醒</div>
+          <h3>"提醒我 3 天后跟进这个客户"</h3>
+          <p>设置跟进提醒，到时间自动提醒你，还可以附上上次沟通的要点，让你不会忘记任何客户。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">方案撰写</div>
+          <h3>"帮我写个给客户的解决方案"</h3>
+          <p>根据客户需求和你的产品信息，生成针对性的方案草稿，你只需要调整和补充。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">周报生成</div>
+          <h3>"把我这周的拜访记录整理成周报"</h3>
+          <p>汇总本周的客户拜访、商机进展、成交情况，自动生成结构化周报。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marketing -->
+    <div class="case-content" data-role="marketing">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">内容创作</div>
+          <h3>"帮我写 5 条小红书文案"</h3>
+          <p>OpenClaw 可以根据你的产品定位和目标人群，批量生成不同风格的社媒文案，你挑选修改即可。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">舆情监控</div>
+          <h3>"帮我盯着品牌在社媒上的讨论"</h3>
+          <p>自动监控品牌关键词，发现负面舆情第一时间通知你，定期生成舆情报告。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">数据分析</div>
+          <h3>"这次活动的投放数据帮我分析一下"</h3>
+          <p>把投放数据丢给它，自动分析 ROI、转化率、人群画像，生成可视化报告。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">竞品分析</div>
+          <h3>"看看竞品最近在做什么营销活动"</h3>
+          <p>自动追踪竞品的社媒动态、广告投放、活动信息，整理成对比分析报告。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dev -->
+    <div class="case-content" data-role="dev">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">监控告警</div>
+          <h3>"服务器有异常第一时间通知我"</h3>
+          <p>OpenClaw 可以对接监控系统，检测到异常时自动分析日志，把问题描述和初步排查结果发到你的 Telegram/钉钉。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">文档生成</div>
+          <h3>"帮我把这个 API 的文档写一下"</h3>
+          <p>读取代码和注释，自动生成 API 文档，包含参数说明、示例请求、错误码说明。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">代码审查</div>
+          <h3>"帮我 review 一下这个 PR"</h3>
+          <p>自动分析代码变更，检查潜在 bug、性能问题、安全隐患、代码风格，生成审查意见。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">日常自动化</div>
+          <h3>"每天帮我汇总 GitHub Issues 和 PR"</h3>
+          <p>定时汇总仓库动态，整理未处理的 Issue、待合并的 PR、CI 失败记录，发给你或团队群。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Design -->
+    <div class="case-content" data-role="design">
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-tag">需求整理</div>
+          <h3>"把产品经理发的需求帮我整理清楚"</h3>
+          <p>OpenClaw 帮你把零散的需求消息、文档整理成结构化的设计需求文档，包含场景、目标用户、交互要求。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">素材搜集</div>
+          <h3>"帮我找一些金融行业 App 的设计参考"</h3>
+          <p>自动搜索相关设计案例，整理参考图和链接，标注设计亮点，帮你快速找到灵感。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">文案优化</div>
+          <h3>"帮我改改这几个界面上的文案"</h3>
+          <p>根据 UI 场景和用户群体，优化界面文案、按钮文字、提示语，让表达更清晰简洁。</p>
+        </div>
+        <div class="case-card">
+          <div class="case-tag">设计规范</div>
+          <h3>"帮我整理设计规范文档"</h3>
+          <p>根据你的设计稿信息，自动生成色值、字号、间距等设计规范文档，方便开发对接。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="case-cta">
+      <p>准备动手试试？</p>
+      <a href="index.html#guide" class="btn btn-primary">开始使用 OpenClaw →</a>
+      <a href="index.html#versions" class="btn btn-outline">先看看各版本对比</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>🦐 虾逛 — 帮助你从零开始使用 AI 代理</p>
+    <p class="footer-note">本站为社区资讯站，与 OpenClaw 官方无直接关联。信息仅供参考。</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script src="assets/what-is.js?v=2"></script>
+</body>
+</html>
