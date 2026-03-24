@@ -338,9 +338,134 @@ a:hover { color: var(--c-primary-dark); }
 .faq-item[open] summary::after { content: "−"; }
 .faq-item p { padding: 0 20px 16px; font-size: 14px; color: var(--c-text-secondary); }
 
+/* ===== Version History / Changelog ===== */
+.version-info-box {
+  margin-bottom: 32px;
+}
+.version-current {
+  background: linear-gradient(135deg, var(--c-primary-light), #fff5f5);
+  border: 2px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  position: relative;
+}
+.version-current-badge {
+  display: inline-block;
+  background: var(--c-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+.version-current-detail {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.version-current-tag {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--c-primary-dark);
+}
+.version-current-date {
+  font-size: 14px;
+  color: var(--c-text-secondary);
+}
+.version-current-desc {
+  font-size: 15px;
+  color: var(--c-text-secondary);
+  margin-top: 4px;
+}
+
+.changelog-list {
+  position: relative;
+  padding-left: 24px;
+}
+.changelog-list::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--c-border);
+}
+.changelog-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.changelog-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--c-primary);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+  margin-left: -24px;
+}
+.changelog-item:first-child .changelog-marker {
+  background: var(--c-primary);
+}
+.changelog-content {
+  flex: 1;
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  transition: box-shadow var(--transition);
+}
+.changelog-content:hover {
+  box-shadow: var(--shadow-hover);
+}
+.changelog-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.changelog-tag {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--c-text);
+}
+.changelog-date {
+  font-size: 13px;
+  color: var(--c-text-secondary);
+}
+.changelog-desc {
+  font-size: 14px;
+  color: var(--c-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+.changelog-hash {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 12px;
+  color: var(--c-primary);
+  background: var(--c-primary-light);
+  padding: 1px 8px;
+  border-radius: 4px;
+}
+
 /* ===== Footer ===== */
 .footer {
   text-align: center; padding: 40px 0; border-top: 1px solid var(--c-border);
   font-size: 14px; color: var(--c-text-secondary);
+}
+.footer-version {
+  font-size: 12px;
+  color: var(--c-primary);
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 .footer-note { font-size: 12px; margin-top: 8px; opacity: 0.6; }
