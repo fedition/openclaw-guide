@@ -13,7 +13,10 @@
 <!-- Navigation -->
 <nav class="navbar" id="navbar">
   <div class="container nav-container">
-    <a href="index.html" class="logo">🦐 虾逛</a>
+    <div class="logo-wrap">
+      <a href="index.html" class="logo">🦐 虾逛</a>
+      <a href="changelog.html" class="logo-version">v0.3.0</a>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="菜单">
       <span></span><span></span><span></span>
     </button>
@@ -25,7 +28,7 @@
           <a href="use-cases.html">实际场景应用<div class="nav-dropdown-desc">看看不同职业怎么用</div></a>
         </div>
       </li>
-      <li><a href="index.html#guide">开始使用 OpenClaw</a></li>
+      <li><a href="get-started.html">开始使用 OpenClaw</a></li>
       <li><a href="index.html#versions">各种 OpenClaw 集合对比</a></li>
     </ul>
   </div>
@@ -53,11 +56,11 @@
       </a>
       <a href="#ch3" class="sidebar-link" data-chapter="ch3">
         <span class="sidebar-num">三</span>
-        <span class="sidebar-title">为什么 OpenClaw 忽然火了</span>
+        <span class="sidebar-title">我需要用 AI 吗？</span>
       </a>
       <a href="#ch4" class="sidebar-link" data-chapter="ch4">
         <span class="sidebar-num">四</span>
-        <span class="sidebar-title">我应不应该现在用这些东西？</span>
+        <span class="sidebar-title">我应该怎样开始使用？</span>
       </a>
       <a href="#ch-next" class="sidebar-link" data-chapter="ch-next">
         <span class="sidebar-num">→</span>
@@ -117,25 +120,15 @@
         </table>
       </div>
       <p>所以你看到的豆包、元宝、千问这些，本质上都是 ChatGPT 引发的这波浪潮的产物。</p>
-
-      <div class="chapter-callout">
-        <strong>这一章的重点</strong>
-        <ul>
-          <li>2022 年 11 月 ChatGPT 发布，引发了整个 AI 浪潮</li>
-          <li>以前的 AI 只会做选择题——根据设定好的答案回答</li>
-          <li>现在的 AI 会做应用题——像个通才大学生，能自己组织语言和你对话</li>
-          <li>豆包、千问这些都是这波浪潮的产物</li>
-        </ul>
-      </div>
     </article>
 
     <!-- Chapter 2: 了解一下 AI 现在常见的黑话 -->
     <article class="chapter" id="ch2">
       <div class="chapter-label">第二章</div>
       <h1>了解一下 AI 现在常见的黑话</h1>
-      <p class="chapter-lead">你不需要懂算法、不需要懂编程。但下面这几个词搞清楚了，后面看任何 AI 相关的东西都不会懵。</p>
+      <p class="chapter-lead">在聊 AI 或者 OpenClaw 的时候，经常会听到一些乱七八糟的术语，比如大模型，Token，Memory 这些，容易一头雾水。</p>
 
-      <p>为了让你一次性搞懂所有概念，我们用<strong>一个连贯的比喻</strong>来串起来：</p>
+      <p>其实对于大部分人来说，我们其实不需要知道所有的术语，只需要知道核心需要用到的那部分就可以。</p>
 
       <div class="chapter-callout callout-info">
         <strong>🎓 一个比喻贯穿全章</strong>
@@ -376,36 +369,6 @@
       <p><strong>豆包、元宝、千问</strong>这些，就是一个只能上网、只能和你聊天的研究生。你问他问题他能答，但让他帮你发个邮件？他做不到。</p>
       <p><strong>OpenClaw</strong> 呢，就是你<strong>给这个研究生一台电脑</strong>。你可以把你自己的电脑给他用，也可以另外租一台专门给他。这样他就可以像真人一样操作电脑，帮你去完成电脑上的各种操作。</p>
 
-      <!-- API Key -->
-      <h2>🔑 API Key = 研究生的「上岗证」</h2>
-      <p>你选好了要雇哪个研究生（比如 Claude），就得去他所在的"学校"（Anthropic 公司）办一张<strong>上岗证</strong>。有了这张证，研究生才能正式来给你干活。</p>
-      <p>这张上岗证就是 <strong>API Key</strong>——一串密码，OpenClaw 拿着它去调用研究生的能力，同时通过它来计费发工资。</p>
-      <div class="diagram-wrapper">
-        <svg viewBox="0 0 660 120" xmlns="http://www.w3.org/2000/svg" class="concept-diagram">
-          <rect width="660" height="120" rx="12" fill="#fafafa" stroke="#e0e0e0"/>
-          <g transform="translate(130,60)">
-            <rect x="-100" y="-32" width="200" height="64" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
-            <text x="0" y="-8" text-anchor="middle" fill="#1565c0" font-size="12" font-weight="700">🏫 研究生的学校（如 Anthropic）</text>
-            <text x="0" y="12" text-anchor="middle" fill="#888" font-size="11">注册后给你一张 API Key</text>
-          </g>
-          <g transform="translate(330,60)">
-            <text x="0" y="0" text-anchor="middle" font-size="24">🔑</text>
-            <text x="0" y="22" text-anchor="middle" fill="#1565c0" font-size="10">sk-xxxxx</text>
-          </g>
-          <line x1="232" y1="60" x2="308" y2="60" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrowB)"/>
-          <line x1="352" y1="60" x2="428" y2="60" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrowB)"/>
-          <g transform="translate(530,60)">
-            <rect x="-100" y="-32" width="200" height="64" rx="10" fill="#fff5f5" stroke="#e74c3c" stroke-width="1.5"/>
-            <text x="0" y="-8" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="700">💻 OpenClaw（你给他的电脑）</text>
-            <text x="0" y="12" text-anchor="middle" fill="#888" font-size="11">拿着 Key 让研究生上岗干活</text>
-          </g>
-          <defs>
-            <marker id="arrowB" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1976d2"/></marker>
-          </defs>
-        </svg>
-      </div>
-      <p>部署 OpenClaw 的时候，只需要去对应公司网站注册 → 获取 API Key → 填进去，研究生就上岗了。</p>
-
       <!-- Prompt -->
       <h2>💬 Prompt = 你交代给研究生的话</h2>
       <p>你可能听过"写 Prompt""Prompt 工程师"之类的说法。其实就是<strong>你给研究生交代任务时说的话</strong>。</p>
@@ -457,115 +420,95 @@
           <text x="580" y="125" text-anchor="middle" fill="#333" font-size="11" font-weight="600">完成！</text>
           <text x="580" y="140" text-anchor="middle" fill="#888" font-size="10">结果交给你</text>
 
-          <rect x="30" y="175" width="600" height="60" rx="10" fill="#fff5f5" stroke="#e74c3c" stroke-width="1"/>
-          <text x="330" y="198" text-anchor="middle" fill="#333" font-size="12" font-weight="700">用研究生的话来说就是：</text>
-          <text x="330" y="218" text-anchor="middle" fill="#555" font-size="11">你交代任务 → 研究生坐到电脑前（OpenClaw）→ 动脑思考（大模型，付工资 Token）→ 用技能（Skills）操作电脑 → 搞定！</text>
+          <rect x="30" y="175" width="600" height="70" rx="10" fill="#fff5f5" stroke="#e74c3c" stroke-width="1"/>
+          <text x="330" y="195" text-anchor="middle" fill="#333" font-size="12" font-weight="700">用研究生的话来说就是：</text>
+          <text x="330" y="215" text-anchor="middle" fill="#555" font-size="10">你交代任务 → 研究生坐到电脑前（OpenClaw）→ 动脑思考（大模型，付工资 Token）</text>
+          <text x="330" y="233" text-anchor="middle" fill="#555" font-size="10">→ 用技能（Skills）操作电脑 → 搞定！</text>
 
           <defs>
             <marker id="aR" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#e74c3c"/></marker>
-        <li>"帮我查一下明天的天气，整理成消息发到群里"</li>
-        <li>"把桌面上的发票照片识别出来，整理成 Excel"</li>
-        <li>"每天早上 8 点给我发一份今日待办"</li>
-        <li>"帮我回复这封邮件，语气正式一点"</li>
-      </ul>
-
-      <h2>它和 ChatGPT 到底有什么不同？</h2>
-      <div class="chapter-compare">
-        <div class="compare-item compare-old">
-          <div class="compare-label">ChatGPT / 豆包 / 千问</div>
-          <p>只能聊天。你问它答。<br>不能操作你的电脑、不能发邮件、不能整理文件。<br>所有事还得你自己来。</p>
-        </div>
-        <div class="compare-vs">→</div>
-        <div class="compare-item compare-new">
-          <div class="compare-label">OpenClaw</div>
-          <p>能真正做事。你说它做。<br>能发邮件、整理文件、搜信息、控制浏览器。<br>你只需要确认结果。</p>
-        </div>
+            <marker id="aB" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1976d2"/></marker>
+            <marker id="aG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#43a047"/></marker>
+          </defs>
+        </svg>
       </div>
 
-      <h2>它凭什么这么火？</h2>
-      <p>说白了，就是四个字：<strong>免费、好用</strong>。展开说：</p>
-      <ol class="chapter-list">
-        <li><strong>免费开源</strong>——软件本身不要钱，代码公开透明</li>
-        <li><strong>大脑自己选</strong>——Claude、GPT、DeepSeek 都行，贵的便宜的随你</li>
-        <li><strong>平台随意</strong>——微信、钉钉、飞书、Telegram、Discord 都支持</li>
-        <li><strong>数据在你手里</strong>——运行在你自己的设备上，隐私可控</li>
-        <li><strong>生态丰富</strong>——有各种变种版本，中国大厂也出了定制版</li>
-      </ol>
-
-      <h2>中国大厂都坐不住了</h2>
-      <p>OpenClaw 火了之后，国内大厂纷纷推出了自己的定制版本：</p>
-      <div class="chapter-table">
-        <table>
-          <thead><tr><th>版本</th><th>公司</th><th>特点</th></tr></thead>
-          <tbody>
-            <tr><td>AutoClaw</td><td>智谱 AI</td><td>一键安装，50+ 预装技能，中文体验最好</td></tr>
-            <tr><td>WorkBuddy</td><td>腾讯</td><td>企业微信原生，1 分钟配置</td></tr>
-            <tr><td>CoPaw</td><td>阿里云</td><td>钉钉深度集成，本地+云端混合</td></tr>
-            <tr><td>ArkClaw</td><td>字节跳动</td><td>零配置 SaaS，飞书集成</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>所以你不一定要用原版 OpenClaw——根据你的情况，可能国内版更适合。这些我们在"各种 OpenClaw 集合对比"里会详细说。</p>
-
-      <div class="chapter-callout">
-        <strong>这一章的重点</strong>
-        <ul>
-          <li>OpenClaw = 开源 AI 代理，通过聊天工具给 AI 发指令让它做事</li>
-          <li>和 ChatGPT 的核心区别：不只是聊天，能真正帮你干活</li>
-          <li>免费开源 + 自由选模型 + 隐私可控 = 受欢迎的原因</li>
-          <li>国内大厂都有自己的定制版，可能更适合中国用户</li>
-        </ul>
-      </div>
     </article>
 
     <!-- Chapter 4: 我应不应该现在用这些东西 -->
-    <article class="chapter" id="ch4">
-      <div class="chapter-label">第四章</div>
-      <h1>我应不应该现在用这些东西？</h1>
-      <p class="chapter-lead">看到这里，你可能在想：这东西到底跟我有没有关系？我现在就得用吗？</p>
+    <article class="chapter" id="ch3">
+      <div class="chapter-label">第三章</div>
+      <h1>我需要用 AI 吗？害怕落伍了</h1>
 
-      <h2>先说结论</h2>
-      <p><strong>不是所有人都需要现在就用。但了解一下，绝对不亏。</strong></p>
-      <p>这就像 2012 年的移动支付——当时很多人觉得"我又不是年轻人，用现金挺好的"。结果几年之后，不会扫码付款的人在菜市场都不方便了。</p>
-      <p>AI 不一定会走这么快，但方向是确定的。</p>
+      <h2>一、不用焦虑，不必盲目跟风</h2>
+      <p>总的来说，不用焦虑，有需要的时候再用，不用盲目跟风。</p>
+      <p>而且 AI 升级的速度很快，不用第一时间去赶潮流。</p>
 
-      <h2>这几类人，建议现在就试试</h2>
-      <div class="chapter-table">
-        <table>
-          <thead><tr><th>你是这种情况</th><th>为什么建议你试</th></tr></thead>
-          <tbody>
-            <tr><td>每天有大量重复性工作（整理表格、回邮件、写报告）</td><td>OpenClaw 能帮你自动化这些事，省出来的时间是实打实的</td></tr>
-            <tr><td>工作中需要处理大量文本（法务、财务、行政）</td><td>AI 最擅长的就是文本处理，效率提升特别明显</td></tr>
-            <tr><td>对新技术好奇，愿意花半天时间折腾</td><td>现在上手门槛已经很低，半天就能跑起来</td></tr>
-            <tr><td>团队里有人在用，你想跟上节奏</td><td>先了解原理，再看别人怎么用，然后自己试</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>这几类人，可以先观望</h2>
+      <h2>二、AI 确实改变了很多事</h2>
+      <p>AI 当前改变了很多事情：</p>
       <ul class="chapter-list">
-        <li><strong>工作完全是体力活或手工活</strong>——AI 目前主要帮的是"脑力活"和"电脑上的活"</li>
-        <li><strong>对电脑操作本身就不熟练</strong>——可以先从最简单的聊天 AI（豆包、ChatGPT）开始用，等熟悉了再考虑 OpenClaw</li>
-        <li><strong>担心数据安全，所在行业有严格合规要求</strong>——可以等企业级版本（NemoClaw 等）更成熟了再用</li>
+        <li>写代码的成本变得很低</li>
+        <li>画图、做视频、写文章这类在电脑上完成的工作</li>
+        <li>原来需要专业人士去做的事，现在门槛和成本都大幅降低</li>
       </ul>
 
-      <h2>不管你用不用，记住两件事</h2>
-      <div class="chapter-callout">
-        <strong>第一：不要焦虑</strong>
-        <p style="margin:8px 0 0;">AI 不会明天就替代你。它目前还有很多做不好的事（比如需要创造力的工作、需要人际关系判断的工作）。网上那些"不学 AI 就被淘汰"的说法，大部分是在卖课。</p>
-      </div>
+      <h2>三、AI 也没有改变很多事</h2>
+      <p>很多核心的东西，并没有因为 AI 而变化：</p>
+      <ul class="chapter-list">
+        <li>你的客户还是你的客户</li>
+        <li>你的资产、经验、人脉还是你的资产</li>
+        <li>外卖还是需要外卖员来送，炒菜还是需要厨师炒</li>
+        <li>客户依然会优先找原先的服务商做服务升级，而不是随便换新人</li>
+      </ul>
+
+      <h2>四、什么时候该用 AI？</h2>
+      <p>如果你有大量重复的电脑操作，可以尝试用 AI 来提高效率：</p>
+      <ul class="chapter-list">
+        <li>重复文案、表格整理</li>
+        <li>信息查找、总结</li>
+        <li>简单代码、脚本、格式处理</li>
+        <li>画图、做封面、写初稿</li>
+      </ul>
+
       <div class="chapter-callout callout-info">
-        <strong>第二：保持了解</strong>
-        <p style="margin:8px 0 0;">你不需要成为专家，但知道 AI 能做什么、不能做什么，会帮你做出更好的判断。就像你不需要会修手机，但你得会用手机。</p>
+        <strong>不确定自己能不能用？</strong>
+        <p style="margin:8px 0 0;">可以去看看<a href="use-cases.html">实际场景应用</a>，里面按不同职业和行业整理了真实的使用案例，看看有没有跟你情况类似的。</p>
       </div>
 
-      <h2>如果你决定试试</h2>
-      <p>好消息是，你已经看完了所有基础知识。接下来你可以：</p>
-      <ol class="chapter-list">
-        <li><strong>先看看实际场景</strong>——看看你的职业/行业里，别人怎么用 OpenClaw 解决问题</li>
-        <li><strong>直接上手</strong>——跟着新手指南，5 步部署你的第一个 AI 代理</li>
-      </ol>
-      <p>不管选哪个，你现在已经比 90% 的人更了解这件事了。</p>
+    </article>
+
+    <!-- Chapter 4: 我应该怎样开始使用？ -->
+    <article class="chapter" id="ch4">
+      <div class="chapter-label">第四章</div>
+      <h1>我应该怎样开始使用？</h1>
+
+      <h2>一、先用通用 AI 替代百度</h2>
+      <p>如果你还没用过豆包、元宝、千问这些通用 AI，建议先从这里开始。</p>
+      <p>把它们当成一个更聪明的百度就行——遇到问题不要去搜索引擎搜，直接问 AI。用一段时间你就能感受到区别了。</p>
+
+      <h2>二、根据场景选产品</h2>
+      <p>如果你已经用过通用 AI，觉得还不错，想要更进一步，可以先看看<a href="use-cases.html" style="color:#e74c3c;text-decoration:underline;">实际场景应用</a>。</p>
+      <p>里面按不同职业和行业整理了案例，找到跟你情况类似的场景，看看别人用的是什么产品，照着选就行。</p>
+
+      <h2>三、直接装一个 OpenClaw 玩玩</h2>
+      <p>你也可以直接装一个 OpenClaw（或者选一个变种版本），随便玩玩看。</p>
+      <p>但说实话，<strong>不太推荐这种方式</strong>。原因是：</p>
+      <ul class="chapter-list">
+        <li>没有明确目标的时候，容易玩两天就腻了</li>
+        <li>容易高估它——觉得它什么都能干，结果发现不是</li>
+        <li>也容易低估它——随便试了两下觉得不行，其实是没找对用法</li>
+      </ul>
+      <p>有具体需求再上手，效果会好很多。</p>
+
+      <h2>四、长期来看，最重要的是你自己</h2>
+      <p>不管你用什么工具——豆包也好，OpenClaw 也好，ChatGPT 也好——长期来看，真正重要的是<strong>你自己的逻辑和沟通能力</strong>。</p>
+      <p>AI 再聪明，也需要你把事情想清楚、说明白。你要做的是：</p>
+      <ul class="chapter-list">
+        <li>把你想完成的事情梳理清楚</li>
+        <li>清晰地传递给 AI</li>
+        <li>让它能准确地帮你实现需求</li>
+      </ul>
+      <p>这个能力不只是对 AI 有用，对你跟任何人协作都有用。</p>
     </article>
 
     <!-- Next Steps -->
@@ -587,17 +530,6 @@
       </div>
     </article>
 
-    <!-- Page Navigation -->
-    <div class="chapter-pager" id="chapterPager">
-      <a href="#" class="pager-btn pager-prev" id="prevBtn">
-        <span class="pager-dir">← 上一章</span>
-        <span class="pager-title" id="prevTitle"></span>
-      </a>
-      <a href="#" class="pager-btn pager-next" id="nextBtn">
-        <span class="pager-dir">下一章 →</span>
-        <span class="pager-title" id="nextTitle"></span>
-      </a>
-    </div>
 
   </main>
 </div>

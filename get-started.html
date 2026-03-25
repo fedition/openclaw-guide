@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开始使用 OpenClaw — 虾逛</title>
+  <meta name="description" content="选择适合你的 OpenClaw 版本，原版或各种变种，开始你的 AI 代理之旅。">
+  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/what-is.css?v=4">
+  <link rel="stylesheet" href="assets/get-started.css?v=1">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo">🦐 虾逛</a>
+      <a href="changelog.html" class="logo-version">v0.3.0</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-has-dropdown">
+        <a href="what-is.html">OpenClaw 能干嘛？</a>
+        <div class="nav-dropdown">
+          <a href="ai-basics.html">基础科普<div class="nav-dropdown-desc">没接触过 AI？从这里开始</div></a>
+          <a href="use-cases.html">实际场景应用<div class="nav-dropdown-desc">看看不同职业怎么用</div></a>
+        </div>
+      </li>
+      <li><a href="get-started.html" class="nav-active">开始使用 OpenClaw</a></li>
+      <li><a href="index.html#versions">各种 OpenClaw 集合对比</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="gs-hero">
+  <div class="container">
+    <h1>开始使用 OpenClaw</h1>
+    <p class="gs-hero-desc">先选一个适合你的版本，然后跟着指引上手。</p>
+  </div>
+</section>
+
+<!-- Step 1: Choose -->
+<section class="gs-section">
+  <div class="container">
+    <h2 class="gs-step-title">第一步：选一个版本</h2>
+    <p class="gs-step-desc">OpenClaw 是开源的，所以很多公司在它的基础上做了自己的版本。你不一定要用原版——根据你的情况选一个最顺手的就行。</p>
+
+    <!-- Filter Tabs -->
+    <div class="gs-filter">
+      <button class="gs-filter-btn active" data-filter="all">全部</button>
+      <button class="gs-filter-btn" data-filter="cn-bigco">国内大厂</button>
+      <button class="gs-filter-btn" data-filter="lightweight">轻量级</button>
+      <button class="gs-filter-btn" data-filter="cloud">云端托管</button>
+      <button class="gs-filter-btn" data-filter="security">安全优先</button>
+      <button class="gs-filter-btn" data-filter="original">原版</button>
+    </div>
+
+    <!-- Version Cards -->
+    <div class="gs-grid" id="versionGrid">
+
+      <!-- 原版 OpenClaw -->
+      <div class="gs-card gs-card-featured" data-tags="original">
+        <div class="gs-card-header">
+          <div class="gs-card-badge">原版</div>
+          <h3>OpenClaw</h3>
+          <span class="gs-card-cost-inline">免费 + API 费用</span>
+          <p class="gs-card-company">Peter Steinberger</p>
+        </div>
+        <p class="gs-card-desc">最原始的版本，功能最全，社区最活跃。所有变种都是基于它开发的。</p>
+        <ul class="gs-card-features">
+          <li>功能最完整，更新最快</li>
+          <li>社区生态最丰富</li>
+          <li>需要自己部署和配置</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>软件免费，需自备服务器 + AI 模型 API 费用（约 ¥0.5~5/次对话）</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">自部署</span>
+          <span class="gs-card-tag">英文为主</span>
+        </div>
+        <div class="gs-card-verdict">适合有一定动手能力、想要最完整功能的人</div>
+      </div>
+
+      <!-- AutoClaw -->
+      <div class="gs-card" data-tags="cn-bigco">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-cn">国内大厂</div>
+          <h3>AutoClaw</h3>
+          <span class="gs-card-cost-inline">有免费额度</span>
+          <p class="gs-card-company">智谱 AI</p>
+        </div>
+        <p class="gs-card-desc">一键安装的桌面版，自带 50+ 预装技能，中文体验最好。</p>
+        <ul class="gs-card-features">
+          <li>Windows/macOS 一键安装</li>
+          <li>50+ 预装技能，开箱即用</li>
+          <li>中文界面和中文模型支持最好</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>软件免费，内置智谱模型有免费额度，超出后按量计费</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">一键安装</span>
+          <span class="gs-card-tag">中文友好</span>
+        </div>
+        <div class="gs-card-verdict">适合想最快上手、不想折腾的普通用户</div>
+      </div>
+
+      <!-- WorkBuddy -->
+      <div class="gs-card" data-tags="cn-bigco">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-cn">国内大厂</div>
+          <h3>WorkBuddy</h3>
+          <span class="gs-card-cost-inline">企业定价</span>
+          <p class="gs-card-company">腾讯</p>
+        </div>
+        <p class="gs-card-desc">企业微信原生 AI 代理，腾讯 2000+ 非技术员工测试过。</p>
+        <ul class="gs-card-features">
+          <li>企业微信深度集成</li>
+          <li>20+ 技能包，支持多种国产模型</li>
+          <li>企业级安全层</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>企业定价，需联系腾讯商务咨询</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">企业微信</span>
+          <span class="gs-card-tag">企业级</span>
+        </div>
+        <div class="gs-card-verdict">适合日常用企业微信办公的团队</div>
+      </div>
+
+      <!-- QClaw -->
+      <div class="gs-card" data-tags="cn-bigco">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-cn">国内大厂</div>
+          <h3>QClaw</h3>
+          <span class="gs-card-cost-inline">未公布</span>
+          <p class="gs-card-company">腾讯</p>
+        </div>
+        <p class="gs-card-desc">一键安装，把 OpenClaw 放进微信和 QQ 里。内测中。</p>
+        <ul class="gs-card-features">
+          <li>微信/QQ 原生集成</li>
+          <li>一键安装部署</li>
+          <li>2026年3月开始内测</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>内测中，定价未公布</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">微信/QQ</span>
+          <span class="gs-card-tag">内测中</span>
+        </div>
+        <div class="gs-card-verdict">适合个人微信/QQ 重度用户（暂未公开）</div>
+      </div>
+
+      <!-- CoPaw -->
+      <div class="gs-card" data-tags="cn-bigco lightweight">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-cn">国内大厂</div>
+          <h3>CoPaw</h3>
+          <span class="gs-card-cost-inline">有免费额度</span>
+          <p class="gs-card-company">阿里云 / 通义</p>
+        </div>
+        <p class="gs-card-desc">Python 实现，内存仅为 OpenClaw 的 1/5，支持本地+云端混合部署。</p>
+        <ul class="gs-card-features">
+          <li>轻量级，资源占用少</li>
+          <li>钉钉、飞书、QQ、Discord 原生支持</li>
+          <li>本地+云端混合部署</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>软件免费开源，模型 API 按量付费（通义千问有免费额度）</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">钉钉</span>
+          <span class="gs-card-tag">轻量</span>
+        </div>
+        <div class="gs-card-verdict">适合用钉钉的团队，或者想要轻量部署的用户</div>
+      </div>
+
+      <!-- ArkClaw -->
+      <div class="gs-card" data-tags="cn-bigco cloud">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-cn">国内大厂</div>
+          <h3>ArkClaw</h3>
+          <span class="gs-card-cost-inline">¥9.9 起</span>
+          <p class="gs-card-company">字节跳动 / 火山引擎</p>
+        </div>
+        <p class="gs-card-desc">云端 SaaS 版本，打开浏览器就能用，无需任何本地部署。</p>
+        <ul class="gs-card-features">
+          <li>零配置，浏览器直接用</li>
+          <li>飞书深度集成</li>
+          <li>ClawHub 技能库，支持多种模型</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>基础版 ¥9.9 起，按套餐付费</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">云端</span>
+          <span class="gs-card-tag">飞书</span>
+        </div>
+        <div class="gs-card-verdict">适合用飞书的团队，或者不想碰任何部署的人</div>
+      </div>
+
+      <!-- Kimi Claw -->
+      <div class="gs-card" data-tags="cn-bigco cloud">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-cn">国内大厂</div>
+          <h3>Kimi Claw</h3>
+          <span class="gs-card-cost-inline">有免费额度</span>
+          <p class="gs-card-company">月之暗面 / Moonshot AI</p>
+        </div>
+        <p class="gs-card-desc">在 kimi.com 里直接运行的 OpenClaw，5000+ 预装技能，40GB 云存储。</p>
+        <ul class="gs-card-features">
+          <li>Kimi 平台内原生运行</li>
+          <li>5000+ 社区技能预装</li>
+          <li>支持连接已有的 OpenClaw 实例</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>Kimi 会员内含，非会员有免费额度</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">云端</span>
+          <span class="gs-card-tag">技能丰富</span>
+        </div>
+        <div class="gs-card-verdict">适合已经在用 Kimi 的用户</div>
+      </div>
+
+      <!-- MaxClaw -->
+      <div class="gs-card" data-tags="cloud">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-cloud">云端</div>
+          <h3>MaxClaw</h3>
+          <span class="gs-card-cost-inline">有免费试用</span>
+          <p class="gs-card-company">MiniMax</p>
+        </div>
+        <p class="gs-card-desc">云端一键部署，10 秒内启动，号称成本只有同类的 1/10。</p>
+        <ul class="gs-card-features">
+          <li>10 秒部署，极速上手</li>
+          <li>连接 Telegram/Discord/Slack</li>
+          <li>MiniMax M2.5 模型，性价比高</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>号称同类产品 1/10 成本，有免费试用额度</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">云端</span>
+          <span class="gs-card-tag">低成本</span>
+        </div>
+        <div class="gs-card-verdict">适合预算有限、想要快速体验的用户</div>
+      </div>
+
+      <!-- HiClaw -->
+      <div class="gs-card" data-tags="cn-bigco">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-cn">国内大厂</div>
+          <h3>HiClaw</h3>
+          <span class="gs-card-cost-inline">免费 + API 费用</span>
+          <p class="gs-card-company">阿里巴巴 / Higress 社区</p>
+        </div>
+        <p class="gs-card-desc">团队版 OpenClaw，多个 AI 代理可以协作完成任务。</p>
+        <ul class="gs-card-features">
+          <li>多代理协作（前端、后端、测试等）</li>
+          <li>Manager Agent 统一调度</li>
+          <li>集中式安全凭证管理</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>开源免费，需自备服务器和模型 API</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">多代理</span>
+          <span class="gs-card-tag">团队协作</span>
+        </div>
+        <div class="gs-card-verdict">适合需要多个 AI 代理协同工作的技术团队</div>
+      </div>
+
+      <!-- Moltworker -->
+      <div class="gs-card" data-tags="cloud">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-cloud">云端</div>
+          <h3>Moltworker</h3>
+          <span class="gs-card-cost-inline">有免费额度</span>
+          <p class="gs-card-company">Cloudflare</p>
+        </div>
+        <p class="gs-card-desc">在 Cloudflare 边缘网络上运行 OpenClaw，全球分布，零运维。</p>
+        <ul class="gs-card-features">
+          <li>全球 CDN 节点运行</li>
+          <li>零运维，始终在线</li>
+          <li>无法访问本地文件（纯云端）</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>Cloudflare Workers 免费额度内可用，超出按用量计费</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">云端</span>
+          <span class="gs-card-tag">全球分布</span>
+        </div>
+        <div class="gs-card-verdict">适合只需要云端通讯和 API 编排的用户</div>
+      </div>
+
+      <!-- NemoClaw -->
+      <div class="gs-card" data-tags="security">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-secure">安全</div>
+          <h3>NemoClaw</h3>
+          <span class="gs-card-cost-inline">免费 + GPU 硬件</span>
+          <p class="gs-card-company">NVIDIA</p>
+        </div>
+        <p class="gs-card-desc">安全优先的参考架构，在沙箱中运行 OpenClaw，带隐私策略管控。</p>
+        <ul class="gs-card-features">
+          <li>沙箱隔离运行</li>
+          <li>隐私策略和安全护栏</li>
+          <li>本地 Nemotron 模型推理</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>开源免费，需要 NVIDIA GPU 硬件（本地推理）</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">安全沙箱</span>
+          <span class="gs-card-tag">本地推理</span>
+        </div>
+        <div class="gs-card-verdict">适合对数据安全有严格要求的企业</div>
+      </div>
+
+      <!-- NanoClaw -->
+      <div class="gs-card" data-tags="security">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-secure">安全</div>
+          <h3>NanoClaw</h3>
+          <span class="gs-card-cost-inline">免费 + API 费用</span>
+          <p class="gs-card-company">Qwibit AI</p>
+        </div>
+        <p class="gs-card-desc">基于 Anthropic SDK 的安全加固版，容器隔离执行，内置审计日志。</p>
+        <ul class="gs-card-features">
+          <li>容器隔离技能执行</li>
+          <li>强制权限审批机制</li>
+          <li>WhatsApp/Telegram/Slack/Gmail 支持</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>开源免费，需自备模型 API 费用</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">安全加固</span>
+          <span class="gs-card-tag">审计日志</span>
+        </div>
+        <div class="gs-card-verdict">适合需要合规审计的安全敏感团队</div>
+      </div>
+
+      <!-- IronClaw -->
+      <div class="gs-card" data-tags="security">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-secure">安全</div>
+          <h3>IronClaw</h3>
+          <span class="gs-card-cost-inline">免费 + TEE 硬件</span>
+          <p class="gs-card-company">NEAR AI</p>
+        </div>
+        <p class="gs-card-desc">Rust 重写，运行在硬件级加密可信执行环境（TEE）中。</p>
+        <ul class="gs-card-features">
+          <li>硬件级安全（TEE）</li>
+          <li>Rust 实现，高性能</li>
+          <li>最高级别的隐私保护</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>开源免费，需要支持 TEE 的硬件环境</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">硬件加密</span>
+          <span class="gs-card-tag">Rust</span>
+        </div>
+        <div class="gs-card-verdict">适合对隐私有极端要求的场景</div>
+      </div>
+
+      <!-- ZeroClaw -->
+      <div class="gs-card" data-tags="lightweight">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-light">轻量</div>
+          <h3>ZeroClaw</h3>
+          <span class="gs-card-cost-inline">免费 + API 费用</span>
+          <p class="gs-card-company">Sundai.Club 社区</p>
+        </div>
+        <p class="gs-card-desc">Rust 独立重写，3.4 MB 二进制文件，内存占用不到 5 MB。</p>
+        <ul class="gs-card-features">
+          <li>3.4 MB 体积，5 MB 内存</li>
+          <li>22+ 模型提供商支持</li>
+          <li>内置 Telegram 等渠道</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>完全免费开源，仅需模型 API 费用</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">极轻量</span>
+          <span class="gs-card-tag">Rust</span>
+        </div>
+        <div class="gs-card-verdict">适合资源受限的环境或极简主义者</div>
+      </div>
+
+      <!-- PicoClaw -->
+      <div class="gs-card" data-tags="lightweight">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-light">轻量</div>
+          <h3>PicoClaw</h3>
+          <span class="gs-card-cost-inline">免费 + ¥70 硬件</span>
+          <p class="gs-card-company">Sipeed</p>
+        </div>
+        <p class="gs-card-desc">Go 语言编写，能跑在 10 美元的硬件上，启动速度比 OpenClaw 快 400 倍。</p>
+        <ul class="gs-card-features">
+          <li>10 MB 以下内存</li>
+          <li>支持 RISC-V/ARM/x86 等架构</li>
+          <li>单个二进制文件部署</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>完全免费开源，硬件成本低至 ¥70（$10 开发板）</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">嵌入式</span>
+          <span class="gs-card-tag">Go</span>
+        </div>
+        <div class="gs-card-verdict">适合物联网/边缘计算场景</div>
+      </div>
+
+      <!-- Nanobot -->
+      <div class="gs-card" data-tags="lightweight">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-light">轻量</div>
+          <h3>Nanobot</h3>
+          <span class="gs-card-cost-inline">免费 + API 费用</span>
+          <p class="gs-card-company">香港大学</p>
+        </div>
+        <p class="gs-card-desc">仅 4000 行 Python 代码，核心功能齐全，适合学习和研究。</p>
+        <ul class="gs-card-features">
+          <li>代码极简，容易理解</li>
+          <li>持久记忆、网页搜索、后台代理</li>
+          <li>Telegram/WhatsApp 支持</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>完全免费开源，仅需模型 API 费用</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">极简</span>
+          <span class="gs-card-tag">学习用</span>
+        </div>
+        <div class="gs-card-verdict">适合想了解原理、学习 AI 代理开发的人</div>
+      </div>
+
+      <!-- NullClaw -->
+      <div class="gs-card" data-tags="lightweight">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-light">轻量</div>
+          <h3>NullClaw</h3>
+          <p class="gs-card-company">社区</p>
+        </div>
+        <p class="gs-card-desc">Zig 编写，678 KB 体积，1 MB 内存，启动时间不到 2 毫秒。</p>
+        <ul class="gs-card-features">
+          <li>678 KB 二进制文件</li>
+          <li>1 MB 内存占用</li>
+          <li>极限性能优化</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>完全免费开源，仅需模型 API 费用</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">极限轻量</span>
+          <span class="gs-card-tag">Zig</span>
+        </div>
+        <div class="gs-card-verdict">适合极限资源受限的嵌入式场景</div>
+      </div>
+
+      <!-- MetaClaw -->
+      <div class="gs-card" data-tags="lightweight">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-special">特色</div>
+          <h3>MetaClaw</h3>
+          <p class="gs-card-company">Aiming Lab</p>
+        </div>
+        <p class="gs-card-desc">会自我进化的 AI 代理，在你使用过程中持续学习优化。</p>
+        <ul class="gs-card-features">
+          <li>持续学习，越用越聪明</li>
+          <li>作为 OpenAI 兼容代理层运行</li>
+          <li>学术研究背景</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>开源免费，需自备模型 API 费用</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">自进化</span>
+          <span class="gs-card-tag">研究型</span>
+        </div>
+        <div class="gs-card-verdict">适合对 AI 研究感兴趣的人</div>
+      </div>
+
+      <!-- Moltis -->
+      <div class="gs-card" data-tags="security">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-secure">企业级</div>
+          <h3>Moltis</h3>
+          <p class="gs-card-company">社区</p>
+        </div>
+        <p class="gs-card-desc">Rust 重写的企业级实现，15 万行代码，2300+ 测试，完整可观测性。</p>
+        <ul class="gs-card-features">
+          <li>Prometheus 监控 + OpenTelemetry 追踪</li>
+          <li>15 个生命周期钩子</li>
+          <li>8 种语音合成 + 7 种语音识别</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>开源免费，需自备服务器和模型 API</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">企业级</span>
+          <span class="gs-card-tag">可观测</span>
+        </div>
+        <div class="gs-card-verdict">适合需要生产级部署和监控的企业</div>
+      </div>
+
+      <!-- OpenFang -->
+      <div class="gs-card" data-tags="lightweight">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-special">特色</div>
+          <h3>OpenFang</h3>
+          <p class="gs-card-company">社区</p>
+        </div>
+        <p class="gs-card-desc">定位为"代理操作系统"，Rust 编写，32 MB 单文件，180 ms 冷启动。</p>
+        <ul class="gs-card-features">
+          <li>7 个专用模块（调度、知识图谱等）</li>
+          <li>13.7 万行 Rust 代码</li>
+          <li>1767+ 测试用例</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>开源免费，需自备模型 API 费用</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">Agent OS</span>
+          <span class="gs-card-tag">Rust</span>
+        </div>
+        <div class="gs-card-verdict">适合想要超越 OpenClaw 的高级用户</div>
+      </div>
+
+      <!-- MicroClaw -->
+      <div class="gs-card" data-tags="lightweight">
+        <div class="gs-card-header">
+          <div class="gs-card-badge badge-light">轻量</div>
+          <h3>MicroClaw</h3>
+          <p class="gs-card-company">社区</p>
+        </div>
+        <p class="gs-card-desc">Rust 编写的离线备用代理，断网时自动接管工作。</p>
+        <ul class="gs-card-features">
+          <li>离线模式自动切换</li>
+          <li>14+ 平台适配器</li>
+          <li>Telegram/Discord/Slack/飞书等支持</li>
+        </ul>
+        <div class="gs-card-cost"><span class="cost-label">预估费用</span>完全免费开源，离线模式可配合本地模型零成本运行</div>
+        <div class="gs-card-meta">
+          <span class="gs-card-tag">离线备用</span>
+          <span class="gs-card-tag">Rust</span>
+        </div>
+        <div class="gs-card-verdict">适合网络不稳定环境的备用方案</div>
+      </div>
+
+    </div>
+
+    <p class="gs-count" id="gsCount"></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>🦐 虾逛 — 帮助你从零开始使用 AI 代理</p>
+    <p class="footer-note">本站为社区资讯站，与 OpenClaw 官方无直接关联。信息仅供参考。</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script src="assets/get-started.js"></script>
+</body>
+</html>

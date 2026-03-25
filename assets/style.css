@@ -43,8 +43,11 @@ a:hover { color: var(--c-primary-dark); }
 }
 .navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
 .nav-container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo-wrap { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
 .logo { font-size: 18px; font-weight: 700; color: var(--c-text); }
 .logo:hover { color: var(--c-primary); }
+.logo-version { font-size: 11px; color: var(--c-text-light); margin-top: 2px; transition: color var(--transition); }
+.logo-version:hover { color: var(--c-primary); }
 .nav-links { display: flex; list-style: none; gap: 28px; align-items: center; }
 .nav-links > li { position: relative; }
 .nav-links > li > a { color: var(--c-text-secondary); font-size: 14px; font-weight: 500; transition: color var(--transition); display: block; padding: 20px 0; }

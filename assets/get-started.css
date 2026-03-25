@@ -1,0 +1,145 @@
+/* ===== Get Started Page ===== */
+
+.gs-hero {
+  padding: 140px 0 48px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 50%, #f0f4ff 100%);
+}
+.gs-hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
+.gs-hero-desc { font-size: 16px; color: var(--c-text-secondary); }
+
+.gs-section {
+  padding: 48px 0 80px;
+}
+
+.gs-step-title {
+  font-size: 24px; font-weight: 800; margin-bottom: 8px;
+}
+.gs-step-desc {
+  font-size: 15px; color: var(--c-text-secondary); line-height: 1.8;
+  margin-bottom: 32px; max-width: 640px;
+}
+
+/* Filter Tabs */
+.gs-filter {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px;
+}
+.gs-filter-btn {
+  padding: 7px 18px; border-radius: 20px;
+  border: 1px solid var(--c-border); background: var(--c-bg);
+  font-size: 14px; cursor: pointer; transition: all var(--transition);
+  white-space: nowrap; color: var(--c-text);
+}
+.gs-filter-btn:hover {
+  border-color: var(--c-primary); color: var(--c-primary);
+}
+.gs-filter-btn.active {
+  background: var(--c-primary); color: #fff; border-color: var(--c-primary);
+}
+
+/* Version Cards Grid */
+.gs-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+
+.gs-card {
+  display: flex; flex-direction: column;
+  padding: 28px; border-radius: var(--radius);
+  border: 1px solid var(--c-border); background: var(--c-bg);
+  transition: all var(--transition);
+}
+.gs-card:hover {
+  border-color: var(--c-primary);
+  box-shadow: 0 8px 30px rgba(231,76,60,0.1);
+  transform: translateY(-3px);
+}
+.gs-card.gs-hidden {
+  display: none;
+}
+
+/* Featured card (原版) */
+.gs-card-featured {
+  border-color: var(--c-primary);
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+}
+
+.gs-card-header {
+  margin-bottom: 12px;
+  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 4px;
+  position: relative;
+}
+.gs-card-header h3 {
+  font-size: 20px; font-weight: 800; margin-bottom: 2px;
+  flex: 1;
+}
+.gs-card-header .gs-card-badge { order: -1; width: 100%; margin-bottom: 4px; }
+.gs-card-header .gs-card-cost-inline {
+  font-size: 13px; font-weight: 700; color: #43a047;
+  white-space: nowrap; margin-top: 4px;
+}
+.gs-card-company {
+  font-size: 13px; color: var(--c-text-secondary);
+  width: 100%; order: 1;
+}
+
+.gs-card-badge {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  padding: 2px 10px; border-radius: 4px; margin-bottom: 8px;
+  background: var(--c-primary); color: #fff;
+}
+.gs-card-badge.badge-cn { background: #1976d2; }
+.gs-card-badge.badge-cloud { background: #7c3aed; }
+.gs-card-badge.badge-secure { background: #059669; }
+.gs-card-badge.badge-light { background: #d97706; }
+.gs-card-badge.badge-special { background: #6366f1; }
+
+.gs-card-desc {
+  font-size: 14px; color: var(--c-text-secondary); line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.gs-card-features {
+  list-style: none; padding: 0; margin: 0 0 14px; flex: 1;
+}
+.gs-card-features li {
+  font-size: 13px; color: var(--c-text-secondary); line-height: 1.6;
+  padding: 2px 0 2px 16px; position: relative;
+}
+.gs-card-features li::before {
+  content: "✓"; position: absolute; left: 0; top: 2px;
+  color: #43a047; font-size: 12px; font-weight: 700;
+}
+
+/* Cost (old block style - hidden, replaced by inline) */
+.gs-card-cost { display: none; }
+
+.gs-card-meta {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;
+}
+.gs-card-tag {
+  font-size: 11px; padding: 2px 8px; border-radius: 4px;
+  background: #f3f4f6; color: #666; white-space: nowrap;
+}
+
+.gs-card-verdict {
+  font-size: 13px; color: var(--c-primary); font-weight: 600;
+  padding-top: 12px; border-top: 1px solid var(--c-border);
+}
+
+.gs-count {
+  text-align: center; margin-top: 24px;
+  font-size: 14px; color: var(--c-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .gs-hero { padding: 100px 0 36px; }
+  .gs-hero h1 { font-size: 28px; }
+  .gs-section { padding: 36px 0 60px; }
+  .gs-grid { grid-template-columns: 1fr; }
+  .gs-filter { gap: 6px; }
+  .gs-filter-btn { padding: 6px 14px; font-size: 13px; }
+}
