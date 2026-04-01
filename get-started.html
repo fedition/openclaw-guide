@@ -22,6 +22,7 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">首页</a></li>
       <li class="nav-has-dropdown">
         <a href="what-is.html">OpenClaw 能干嘛？</a>
         <div class="nav-dropdown">
@@ -30,7 +31,7 @@
         </div>
       </li>
       <li><a href="get-started.html" class="nav-active">开始使用 OpenClaw</a></li>
-      <li><a href="index.html#versions">各种 OpenClaw 集合对比</a></li>
+      <li><a href="reviews.html">各种工具的评测</a></li>
     </ul>
   </div>
 </nav>
@@ -49,21 +50,32 @@
     <h2 class="gs-step-title">第一步：选一个版本</h2>
     <p class="gs-step-desc">OpenClaw 是开源的，所以很多公司在它的基础上做了自己的版本。你不一定要用原版——根据你的情况选一个最顺手的就行。</p>
 
-    <!-- Filter Tabs -->
-    <div class="gs-filter">
-      <button class="gs-filter-btn active" data-filter="all">全部</button>
-      <button class="gs-filter-btn" data-filter="cn-bigco">国内大厂</button>
-      <button class="gs-filter-btn" data-filter="lightweight">轻量级</button>
-      <button class="gs-filter-btn" data-filter="cloud">云端托管</button>
-      <button class="gs-filter-btn" data-filter="security">安全优先</button>
-      <button class="gs-filter-btn" data-filter="original">原版</button>
+    <!-- Filter Dropdowns -->
+    <div class="gs-filters">
+      <select class="gs-select" data-group="price">
+        <option value="all">💰 价格：全部</option>
+        <option value="price-free">免费 / 有免费额度</option>
+        <option value="price-low">¥50 以内/月</option>
+        <option value="price-mid">¥50~200/月</option>
+      </select>
+      <select class="gs-select" data-group="deploy">
+        <option value="all">🖥️ 部署：全部</option>
+        <option value="deploy-cloud">云服务器</option>
+        <option value="deploy-local">装在电脑上</option>
+      </select>
+      <select class="gs-select" data-group="setup">
+        <option value="all">⚙️ 难度：全部</option>
+        <option value="setup-easy">简易配置</option>
+        <option value="setup-flex">自由度高</option>
+      </select>
+      <span class="gs-filter-count" id="gsCount"></span>
     </div>
 
     <!-- Version Cards -->
     <div class="gs-grid" id="versionGrid">
 
       <!-- 原版 OpenClaw -->
-      <div class="gs-card gs-card-featured" data-tags="original">
+      <div class="gs-card gs-card-featured" data-tags="price-free deploy-local deploy-cloud setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge">原版</div>
           <h3>OpenClaw</h3>
@@ -81,11 +93,12 @@
           <span class="gs-card-tag">自部署</span>
           <span class="gs-card-tag">英文为主</span>
         </div>
+        <a href="deploy.html" class="gs-card-link">试试看 →</a>
         <div class="gs-card-verdict">适合有一定动手能力、想要最完整功能的人</div>
       </div>
 
       <!-- AutoClaw -->
-      <div class="gs-card" data-tags="cn-bigco">
+      <div class="gs-card" data-tags="price-free deploy-local setup-easy">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-cn">国内大厂</div>
           <h3>AutoClaw</h3>
@@ -104,10 +117,11 @@
           <span class="gs-card-tag">中文友好</span>
         </div>
         <div class="gs-card-verdict">适合想最快上手、不想折腾的普通用户</div>
+        <a href="https://autoglm.zhipuai.cn/autoclaw" target="_blank" class="gs-card-link gs-card-link-ext">前往官网 →</a>
       </div>
 
       <!-- WorkBuddy -->
-      <div class="gs-card" data-tags="cn-bigco">
+      <div class="gs-card" data-tags="price-mid deploy-cloud setup-easy">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-cn">国内大厂</div>
           <h3>WorkBuddy</h3>
@@ -126,10 +140,11 @@
           <span class="gs-card-tag">企业级</span>
         </div>
         <div class="gs-card-verdict">适合日常用企业微信办公的团队</div>
+        <a href="https://www.codebuddy.ai/" target="_blank" class="gs-card-link gs-card-link-ext">前往官网 →</a>
       </div>
 
       <!-- QClaw -->
-      <div class="gs-card" data-tags="cn-bigco">
+      <div class="gs-card" data-tags="price-free deploy-local setup-easy">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-cn">国内大厂</div>
           <h3>QClaw</h3>
@@ -148,10 +163,11 @@
           <span class="gs-card-tag">内测中</span>
         </div>
         <div class="gs-card-verdict">适合个人微信/QQ 重度用户（暂未公开）</div>
+        <a href="https://qclaw.qq.com/" target="_blank" class="gs-card-link gs-card-link-ext">前往官网 →</a>
       </div>
 
       <!-- CoPaw -->
-      <div class="gs-card" data-tags="cn-bigco lightweight">
+      <div class="gs-card" data-tags="price-free deploy-local deploy-cloud setup-easy">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-cn">国内大厂</div>
           <h3>CoPaw</h3>
@@ -170,14 +186,15 @@
           <span class="gs-card-tag">轻量</span>
         </div>
         <div class="gs-card-verdict">适合用钉钉的团队，或者想要轻量部署的用户</div>
+        <a href="https://github.com/agentscope-ai/CoPaw" target="_blank" class="gs-card-link gs-card-link-ext">前往 GitHub →</a>
       </div>
 
       <!-- ArkClaw -->
-      <div class="gs-card" data-tags="cn-bigco cloud">
+      <div class="gs-card" data-tags="price-mid deploy-cloud setup-easy">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-cn">国内大厂</div>
           <h3>ArkClaw</h3>
-          <span class="gs-card-cost-inline">¥9.9 起</span>
+          <span class="gs-card-cost-inline">¥40~200/月</span>
           <p class="gs-card-company">字节跳动 / 火山引擎</p>
         </div>
         <p class="gs-card-desc">云端 SaaS 版本，打开浏览器就能用，无需任何本地部署。</p>
@@ -192,10 +209,11 @@
           <span class="gs-card-tag">飞书</span>
         </div>
         <div class="gs-card-verdict">适合用飞书的团队，或者不想碰任何部署的人</div>
+        <a href="https://www.volcengine.com/" target="_blank" class="gs-card-link gs-card-link-ext">前往火山引擎 →</a>
       </div>
 
       <!-- Kimi Claw -->
-      <div class="gs-card" data-tags="cn-bigco cloud">
+      <div class="gs-card" data-tags="price-free deploy-cloud setup-easy">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-cn">国内大厂</div>
           <h3>Kimi Claw</h3>
@@ -214,10 +232,11 @@
           <span class="gs-card-tag">技能丰富</span>
         </div>
         <div class="gs-card-verdict">适合已经在用 Kimi 的用户</div>
+        <a href="https://kimi.com" target="_blank" class="gs-card-link gs-card-link-ext">前往 Kimi →</a>
       </div>
 
       <!-- MaxClaw -->
-      <div class="gs-card" data-tags="cloud">
+      <div class="gs-card" data-tags="price-free deploy-cloud setup-easy">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-cloud">云端</div>
           <h3>MaxClaw</h3>
@@ -236,10 +255,11 @@
           <span class="gs-card-tag">低成本</span>
         </div>
         <div class="gs-card-verdict">适合预算有限、想要快速体验的用户</div>
+        <a href="https://agent.minimax.io/max-claw" target="_blank" class="gs-card-link gs-card-link-ext">前往官网 →</a>
       </div>
 
       <!-- HiClaw -->
-      <div class="gs-card" data-tags="cn-bigco">
+      <div class="gs-card" data-tags="price-free deploy-local deploy-cloud setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-cn">国内大厂</div>
           <h3>HiClaw</h3>
@@ -258,10 +278,11 @@
           <span class="gs-card-tag">团队协作</span>
         </div>
         <div class="gs-card-verdict">适合需要多个 AI 代理协同工作的技术团队</div>
+        <a href="https://github.com/alibaba/hiclaw" target="_blank" class="gs-card-link gs-card-link-ext">前往 GitHub →</a>
       </div>
 
       <!-- Moltworker -->
-      <div class="gs-card" data-tags="cloud">
+      <div class="gs-card" data-tags="price-free deploy-cloud setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-cloud">云端</div>
           <h3>Moltworker</h3>
@@ -280,10 +301,11 @@
           <span class="gs-card-tag">全球分布</span>
         </div>
         <div class="gs-card-verdict">适合只需要云端通讯和 API 编排的用户</div>
+        <a href="https://github.com/cloudflare/moltworker" target="_blank" class="gs-card-link gs-card-link-ext">前往 GitHub →</a>
       </div>
 
       <!-- NemoClaw -->
-      <div class="gs-card" data-tags="security">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-secure">安全</div>
           <h3>NemoClaw</h3>
@@ -302,10 +324,11 @@
           <span class="gs-card-tag">本地推理</span>
         </div>
         <div class="gs-card-verdict">适合对数据安全有严格要求的企业</div>
+        <a href="https://github.com/NVIDIA/NemoClaw" target="_blank" class="gs-card-link gs-card-link-ext">前往 GitHub →</a>
       </div>
 
       <!-- NanoClaw -->
-      <div class="gs-card" data-tags="security">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-secure">安全</div>
           <h3>NanoClaw</h3>
@@ -324,10 +347,11 @@
           <span class="gs-card-tag">审计日志</span>
         </div>
         <div class="gs-card-verdict">适合需要合规审计的安全敏感团队</div>
+        <a href="https://github.com/qwibitai/nanoclaw" target="_blank" class="gs-card-link gs-card-link-ext">前往 GitHub →</a>
       </div>
 
       <!-- IronClaw -->
-      <div class="gs-card" data-tags="security">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-secure">安全</div>
           <h3>IronClaw</h3>
@@ -346,10 +370,11 @@
           <span class="gs-card-tag">Rust</span>
         </div>
         <div class="gs-card-verdict">适合对隐私有极端要求的场景</div>
+        <a href="https://github.com/nearai/ironclaw" target="_blank" class="gs-card-link gs-card-link-ext">前往 GitHub →</a>
       </div>
 
       <!-- ZeroClaw -->
-      <div class="gs-card" data-tags="lightweight">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-light">轻量</div>
           <h3>ZeroClaw</h3>
@@ -368,10 +393,11 @@
           <span class="gs-card-tag">Rust</span>
         </div>
         <div class="gs-card-verdict">适合资源受限的环境或极简主义者</div>
+        <a href="https://github.com/zeroclaw-labs/zeroclaw" target="_blank" class="gs-card-link gs-card-link-ext">前往 GitHub →</a>
       </div>
 
       <!-- PicoClaw -->
-      <div class="gs-card" data-tags="lightweight">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-light">轻量</div>
           <h3>PicoClaw</h3>
@@ -390,10 +416,11 @@
           <span class="gs-card-tag">Go</span>
         </div>
         <div class="gs-card-verdict">适合物联网/边缘计算场景</div>
+        <a href="https://github.com/sipeed/picoclaw" target="_blank" class="gs-card-link gs-card-link-ext">前往 GitHub →</a>
       </div>
 
       <!-- Nanobot -->
-      <div class="gs-card" data-tags="lightweight">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-light">轻量</div>
           <h3>Nanobot</h3>
@@ -412,10 +439,11 @@
           <span class="gs-card-tag">学习用</span>
         </div>
         <div class="gs-card-verdict">适合想了解原理、学习 AI 代理开发的人</div>
+        <a href="https://github.com/HKUDS/nanobot" target="_blank" class="gs-card-link gs-card-link-ext">前往 GitHub →</a>
       </div>
 
       <!-- NullClaw -->
-      <div class="gs-card" data-tags="lightweight">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-light">轻量</div>
           <h3>NullClaw</h3>
@@ -436,7 +464,7 @@
       </div>
 
       <!-- MetaClaw -->
-      <div class="gs-card" data-tags="lightweight">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-special">特色</div>
           <h3>MetaClaw</h3>
@@ -457,7 +485,7 @@
       </div>
 
       <!-- Moltis -->
-      <div class="gs-card" data-tags="security">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-secure">企业级</div>
           <h3>Moltis</h3>
@@ -478,7 +506,7 @@
       </div>
 
       <!-- OpenFang -->
-      <div class="gs-card" data-tags="lightweight">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-special">特色</div>
           <h3>OpenFang</h3>
@@ -499,7 +527,7 @@
       </div>
 
       <!-- MicroClaw -->
-      <div class="gs-card" data-tags="lightweight">
+      <div class="gs-card" data-tags="price-free deploy-local setup-flex">
         <div class="gs-card-header">
           <div class="gs-card-badge badge-light">轻量</div>
           <h3>MicroClaw</h3>
@@ -521,7 +549,6 @@
 
     </div>
 
-    <p class="gs-count" id="gsCount"></p>
   </div>
 </section>
 
@@ -533,6 +560,7 @@
 </footer>
 
 <script src="assets/main.js"></script>
-<script src="assets/get-started.js"></script>
+<script src="assets/get-started.js?v=2"></script>
+<script src="analytics/tracker.js"></script>
 </body>
 </html>

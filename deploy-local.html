@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本地安装教程 — 虾逛</title>
+  <meta name="description" content="在你的 Windows 或 Mac 电脑上安装 OpenClaw 的详细教程。">
+  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/deploy.css?v=2">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo">🦐 虾逛</a>
+      <a href="changelog.html" class="logo-version">v0.4.0</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">首页</a></li>
+      <li class="nav-has-dropdown">
+        <a href="what-is.html">OpenClaw 能干嘛？</a>
+        <div class="nav-dropdown">
+          <a href="ai-basics.html">基础科普<div class="nav-dropdown-desc">没接触过 AI？从这里开始</div></a>
+          <a href="use-cases.html">实际场景应用<div class="nav-dropdown-desc">看看不同职业怎么用</div></a>
+        </div>
+      </li>
+      <li><a href="get-started.html">开始使用 OpenClaw</a></li>
+      <li><a href="reviews.html">各种工具的评测</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="deploy-hero">
+  <div class="container">
+    <a href="deploy.html" class="deploy-back">← 返回部署方式选择</a>
+    <h1>本地安装教程</h1>
+    <p class="deploy-hero-desc">在你的电脑上安装 OpenClaw，跟着步骤走就行。</p>
+  </div>
+</section>
+
+<!-- Platform Tabs -->
+<section class="deploy-section">
+  <div class="container">
+
+    <div class="platform-tabs">
+      <button class="platform-tab active" data-platform="mac">🍎 macOS</button>
+      <button class="platform-tab" data-platform="win">🪟 Windows</button>
+    </div>
+
+    <!-- ========== macOS ========== -->
+    <div class="platform-content active" id="platform-mac">
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">1</div>
+        <div class="deploy-step-body">
+          <h3>安装 Node.js</h3>
+          <p>OpenClaw 需要 Node.js 22 以上版本。如果你不确定有没有装过，打开<strong>终端</strong>（在启动台搜索"终端"），输入：</p>
+          <pre><code>node -v</code></pre>
+          <p>如果显示 <code>v22.x.x</code> 或更高，跳到第 2 步。否则：</p>
+          <ol>
+            <li>打开 <a href="https://nodejs.org/" target="_blank">nodejs.org</a></li>
+            <li>下载左边的 <strong>LTS 版本</strong>（推荐）</li>
+            <li>双击安装包，一路下一步完成安装</li>
+            <li>重新打开终端，再次输入 <code>node -v</code> 确认版本</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">2</div>
+        <div class="deploy-step-body">
+          <h3>一键安装 OpenClaw</h3>
+          <p>在终端里输入以下命令：</p>
+          <pre><code>curl -fsSL https://openclaw.ai/install.sh | bash</code></pre>
+          <p>这个脚本会自动完成安装，并启动引导向导。</p>
+          <div class="deploy-tip">
+            <strong>不放心直接运行脚本？</strong> 可以先下载查看内容：
+            <pre><code>curl -O https://openclaw.ai/install.sh
+cat install.sh    # 查看脚本内容
+bash install.sh   # 确认没问题后再运行</code></pre>
+          </div>
+          <p><strong>或者用 npm 安装：</strong></p>
+          <pre><code>npm install -g openclaw@latest
+openclaw onboard --install-daemon</code></pre>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">3</div>
+        <div class="deploy-step-body">
+          <h3>获取 AI 大模型的 API Key</h3>
+          <p>OpenClaw 本身只是一个工具，它需要连接 AI 大模型才能"思考"。你需要去大模型公司的网站注册并获取一个 API Key（相当于你的账号密码）。</p>
+          <p><strong>推荐选择：</strong></p>
+          <ul>
+            <li><strong>Claude（Anthropic）</strong>— 效果好，去 <a href="https://console.anthropic.com/" target="_blank">console.anthropic.com</a> 注册，在 Settings → API Keys 创建</li>
+            <li><strong>DeepSeek</strong> — 便宜，去 <a href="https://platform.deepseek.com/" target="_blank">platform.deepseek.com</a> 注册获取</li>
+            <li><strong>不想花钱？</strong> 安装 <a href="https://ollama.com/" target="_blank">Ollama</a>，在本地运行免费模型（需要电脑内存 16GB 以上）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">4</div>
+        <div class="deploy-step-body">
+          <h3>配置 API Key</h3>
+          <p>安装向导会引导你填入 API Key。如果跳过了，可以手动设置：</p>
+          <pre><code># 以 Anthropic 为例，把下面的 sk-ant-xxx 替换成你自己的 Key
+echo 'export ANTHROPIC_API_KEY="sk-ant-xxx"' >> ~/.zshrc
+source ~/.zshrc</code></pre>
+          <p>然后运行引导向导完成剩余配置：</p>
+          <pre><code>openclaw onboard</code></pre>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">5</div>
+        <div class="deploy-step-body">
+          <h3>验证安装</h3>
+          <p>在终端输入：</p>
+          <pre><code>openclaw --version
+openclaw doctor</code></pre>
+          <p>如果显示版本号并且 <code>doctor</code> 没有报错，说明安装成功！</p>
+          <p>现在你可以连接微信、Telegram、Discord 等平台，给你的 AI 代理发消息了。</p>
+        </div>
+      </div>
+
+      <div class="deploy-note">
+        <strong>Apple Silicon 用户注意：</strong>如果你用的是 M1/M2/M3/M4 芯片的 Mac，安装时一般不会有问题。如果遇到报错，可以在终端输入 <code>node -p "process.arch"</code>，确认显示的是 <code>arm64</code>。
+      </div>
+
+    </div>
+
+    <!-- ========== Windows ========== -->
+    <div class="platform-content" id="platform-win">
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">1</div>
+        <div class="deploy-step-body">
+          <h3>安装 Docker Desktop（推荐方式）</h3>
+          <p>Windows 上最简单的方式是用 Docker。不用装各种依赖，一步搞定。</p>
+          <ol>
+            <li>打开 <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop 官网</a></li>
+            <li>下载 Windows 版本并安装</li>
+            <li>安装过程中勾选 <strong>"Use WSL 2 instead of Hyper-V"</strong></li>
+            <li>安装完成后重启电脑</li>
+            <li>打开 Docker Desktop，等待它启动完成（任务栏图标变为稳定状态）</li>
+          </ol>
+          <div class="deploy-tip">
+            <strong>电脑要求：</strong>Windows 10 版本 2004 及以上，或 Windows 11。内存至少 8GB（推荐 16GB）。
+          </div>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">2</div>
+        <div class="deploy-step-body">
+          <h3>用 Docker 安装 OpenClaw</h3>
+          <p>打开 <strong>PowerShell</strong>（在开始菜单搜索 "PowerShell"），输入：</p>
+          <pre><code>docker pull openclaw/openclaw:latest
+docker-compose up -d</code></pre>
+          <p>等待下载完成后，OpenClaw 就运行起来了。</p>
+          <p><strong>或者用完整的安装脚本：</strong></p>
+          <pre><code>git clone https://github.com/openclaw/openclaw.git
+cd openclaw
+docker-compose up -d</code></pre>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">3</div>
+        <div class="deploy-step-body">
+          <h3>获取 AI 大模型的 API Key</h3>
+          <p>跟 Mac 一样，你需要去大模型公司注册获取 API Key：</p>
+          <ul>
+            <li><strong>Claude（Anthropic）</strong>— 效果好，去 <a href="https://console.anthropic.com/" target="_blank">console.anthropic.com</a> 注册</li>
+            <li><strong>DeepSeek</strong> — 便宜，去 <a href="https://platform.deepseek.com/" target="_blank">platform.deepseek.com</a> 注册</li>
+            <li><strong>不想花钱？</strong> 安装 <a href="https://ollama.com/" target="_blank">Ollama</a> 运行本地免费模型（需要 16GB+ 内存）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">4</div>
+        <div class="deploy-step-body">
+          <h3>打开控制面板，填入 API Key</h3>
+          <p>Docker 安装完成后，打开浏览器访问：</p>
+          <pre><code>http://127.0.0.1:18789/</code></pre>
+          <p>在 Settings 页面粘贴你的 API Key 即可。</p>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">5</div>
+        <div class="deploy-step-body">
+          <h3>开始使用</h3>
+          <p>配置完成后，你可以在控制面板里连接 Telegram、Discord 等消息平台，然后给你的 AI 代理发消息试试。</p>
+          <p>每次开机后，确保 Docker Desktop 在运行，OpenClaw 就会自动启动。</p>
+        </div>
+      </div>
+
+      <div class="deploy-note">
+        <strong>另一种方式：WSL2 + 命令行安装</strong><br>
+        如果你熟悉 Linux 命令行，也可以先安装 WSL2，然后在 WSL2 终端里像 Mac 一样用 <code>curl</code> 或 <code>npm</code> 安装。方法跟上面 macOS 部分完全一样。
+      </div>
+
+    </div>
+
+    <!-- Common troubleshooting -->
+    <div class="deploy-trouble">
+      <h3>常见问题</h3>
+      <div class="trouble-item">
+        <strong>Q: 输入 <code>openclaw</code> 提示"命令未找到"？</strong>
+        <p>关闭终端重新打开试试。如果还不行，检查 Node.js 是否安装成功（<code>node -v</code>），然后重新运行 <code>npm install -g openclaw@latest</code>。</p>
+      </div>
+      <div class="trouble-item">
+        <strong>Q: Docker 启动后显示内存不足？</strong>
+        <p>打开 Docker Desktop → Settings → Resources，把内存分配调到至少 2GB。</p>
+      </div>
+      <div class="trouble-item">
+        <strong>Q: API Key 填了但还是不能用？</strong>
+        <p>确认 Key 没有多余的空格，且账户余额充足。可以去对应平台的控制台检查。</p>
+      </div>
+      <div class="trouble-item">
+        <strong>Q: 想换一个 AI 模型怎么办？</strong>
+        <p>运行 <code>openclaw onboard</code> 重新进入配置向导，或在控制面板的 Settings 里修改。</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>🦐 虾逛 — 帮助你从零开始使用 AI 代理</p>
+    <p class="footer-note">本站为社区资讯站，与 OpenClaw 官方无直接关联。信息仅供参考。</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script>
+// Platform tab switching
+(function() {
+  var tabs = document.querySelectorAll('.platform-tab');
+  var contents = document.querySelectorAll('.platform-content');
+
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var platform = this.dataset.platform;
+
+      tabs.forEach(function(t) { t.classList.remove('active'); });
+      contents.forEach(function(c) { c.classList.remove('active'); });
+
+      this.classList.add('active');
+      document.getElementById('platform-' + platform).classList.add('active');
+    });
+  });
+})();
+</script>
+<script src="analytics/tracker.js"></script>
+</body>
+</html>

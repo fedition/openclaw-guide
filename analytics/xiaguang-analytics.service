@@ -1,0 +1,13 @@
+[Unit]
+Description=XiaGuang Analytics Server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/html/op/analytics
+ExecStart=/usr/bin/python3 /var/www/html/op/analytics/server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

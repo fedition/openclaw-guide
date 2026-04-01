@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云服务器部署教程 — 虾逛</title>
+  <meta name="description" content="一步步教你把 OpenClaw 部署到云服务器上，随时随地使用你的 AI 代理。">
+  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/deploy.css?v=3">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo">🦐 虾逛</a>
+      <a href="changelog.html" class="logo-version">v0.4.0</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">首页</a></li>
+      <li class="nav-has-dropdown">
+        <a href="what-is.html">OpenClaw 能干嘛？</a>
+        <div class="nav-dropdown">
+          <a href="ai-basics.html">基础科普<div class="nav-dropdown-desc">没接触过 AI？从这里开始</div></a>
+          <a href="use-cases.html">实际场景应用<div class="nav-dropdown-desc">看看不同职业怎么用</div></a>
+        </div>
+      </li>
+      <li><a href="get-started.html">开始使用 OpenClaw</a></li>
+      <li><a href="reviews.html">各种工具的评测</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="deploy-hero">
+  <div class="container">
+    <a href="deploy.html" class="deploy-back">← 返回部署方式选择</a>
+    <h1>云服务器部署教程</h1>
+    <p class="deploy-hero-desc">跟着步骤走，大约 30 分钟就能搞定。</p>
+  </div>
+</section>
+
+<!-- Step Progress Bar -->
+<section class="wizard-progress-wrap">
+  <div class="container">
+    <div class="wizard-progress">
+      <div class="wizard-step active" data-step="1">
+        <div class="wizard-step-dot">1</div>
+        <div class="wizard-step-label">购买服务器</div>
+      </div>
+      <div class="wizard-step-line"></div>
+      <div class="wizard-step" data-step="2">
+        <div class="wizard-step-dot">2</div>
+        <div class="wizard-step-label">购买大模型</div>
+      </div>
+      <div class="wizard-step-line"></div>
+      <div class="wizard-step" data-step="3">
+        <div class="wizard-step-dot">3</div>
+        <div class="wizard-step-label">连接服务器</div>
+      </div>
+      <div class="wizard-step-line"></div>
+      <div class="wizard-step" data-step="4">
+        <div class="wizard-step-dot">4</div>
+        <div class="wizard-step-label">安装 OpenClaw</div>
+      </div>
+      <div class="wizard-step-line"></div>
+      <div class="wizard-step" data-step="5">
+        <div class="wizard-step-dot">5</div>
+        <div class="wizard-step-label">开始使用</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Step Content -->
+<section class="deploy-section">
+  <div class="container">
+
+    <!-- ===== Step 1: 购买服务器 ===== -->
+    <div class="wizard-panel active" id="step-1">
+      <h2>第一步：购买一台云服务器</h2>
+      <p class="wizard-panel-desc">你需要一台最低配的云服务器就够了。下面是国内主流厂商的推荐方案，任选一个即可。</p>
+
+      <div class="cloud-tip">
+        <strong>选购建议：</strong>选 2 核 2G 内存的最低配就行，跑 OpenClaw 完全够用。优先选你已经有账号的平台，避免重新注册。
+      </div>
+
+      <div class="cloud-providers">
+
+        <!-- 阿里云 -->
+        <div class="cloud-card">
+          <div class="cloud-card-header">
+            <h3>阿里云</h3>
+            <span class="cloud-card-recommend">推荐</span>
+          </div>
+          <p class="cloud-card-product">轻量应用服务器 · 2核2G 40GB SSD · 200M峰值带宽 · 不限流量</p>
+          <div class="cloud-pricing">
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-hot">秒杀价</span>
+              <span class="cloud-price-value"><strong>38</strong> 元/年</span>
+              <span class="cloud-price-note">每天 10:00 / 15:00 限量抢，仅限新用户</span>
+            </div>
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-new">新用户</span>
+              <span class="cloud-price-value"><strong>68</strong> 元/年</span>
+              <span class="cloud-price-note">随时可购买，无需抢购</span>
+            </div>
+            <div class="cloud-price-row">
+              <span class="cloud-price-label">续费价</span>
+              <span class="cloud-price-value">~600+ 元/年</span>
+              <span class="cloud-price-note">轻量服务器续费回归原价，较贵</span>
+            </div>
+          </div>
+          <div class="cloud-promo">
+            <div class="cloud-promo-tag">当前活动</div>
+            <div class="cloud-promo-body">
+              <p><strong>ECS 99 计划</strong>（推荐长期使用）</p>
+              <p>2核2G 3M固定带宽，<strong>99 元/年，续费同价</strong>，有效期至 2027-03-31</p>
+              <p>新老用户均可购买，不用担心到期涨价</p>
+            </div>
+          </div>
+          <ul class="cloud-card-notes">
+            <li>学生认证（学信网）可领 300 元无门槛优惠券</li>
+            <li>新用户可领 300 元 ECS 免费试用额度（3 个月）</li>
+            <li>带宽最大，适合需要较快访问速度的场景</li>
+          </ul>
+          <a href="https://www.aliyun.com/activity" target="_blank" class="cloud-card-btn">去阿里云购买 →</a>
+        </div>
+
+        <!-- 腾讯云 -->
+        <div class="cloud-card">
+          <div class="cloud-card-header">
+            <h3>腾讯云</h3>
+            <span class="cloud-card-recommend">推荐</span>
+          </div>
+          <p class="cloud-card-product">轻量应用服务器 · 2核2G 40GB SSD · 4M带宽 · 300GB月流量</p>
+          <div class="cloud-pricing">
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-hot">秒杀价</span>
+              <span class="cloud-price-value"><strong>38</strong> 元/年</span>
+              <span class="cloud-price-note">4核4G 3M，每天 10:00-12:00 / 15:00-18:00 限量</span>
+            </div>
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-new">新用户</span>
+              <span class="cloud-price-value"><strong>99</strong> 元/年</span>
+              <span class="cloud-price-note">2核2G 4M，新老用户均可，续费同价</span>
+            </div>
+            <div class="cloud-price-row">
+              <span class="cloud-price-label">续费价</span>
+              <span class="cloud-price-value"><strong>99</strong> 元/年</span>
+              <span class="cloud-price-note">99 元方案续费不涨价</span>
+            </div>
+          </div>
+          <div class="cloud-promo">
+            <div class="cloud-promo-tag">当前活动</div>
+            <div class="cloud-promo-body">
+              <p><strong>春季采购季 · AI 开工礼</strong></p>
+              <p>2026 年 3 月限时活动，买 1 年送 3 个月</p>
+              <p>新客可领最高 2,860 元优惠券</p>
+            </div>
+          </div>
+          <ul class="cloud-card-notes">
+            <li>25 岁以下自动享受学生优惠，无需额外认证</li>
+            <li>有免费试用中心，可先体验再决定</li>
+            <li>99 元方案续费同价，适合长期使用</li>
+          </ul>
+          <a href="https://cloud.tencent.com/act/pro/spring2026" target="_blank" class="cloud-card-btn">去腾讯云购买 →</a>
+        </div>
+
+        <!-- 华为云 -->
+        <div class="cloud-card">
+          <div class="cloud-card-header">
+            <h3>华为云</h3>
+          </div>
+          <p class="cloud-card-product">Flexus L 轻量云服务器 · 2核2G · 2M带宽 · 200GB月流量</p>
+          <div class="cloud-pricing">
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-hot">秒杀价</span>
+              <span class="cloud-price-value"><strong>36</strong> 元/年</span>
+              <span class="cloud-price-note">每天 09:00-23:59 限量，仅限新用户</span>
+            </div>
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-new">新用户</span>
+              <span class="cloud-price-value"><strong>46</strong> 元/年</span>
+              <span class="cloud-price-note">仅限 V0 新客户，每人限购 1 台</span>
+            </div>
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-warn">续费价</span>
+              <span class="cloud-price-value">~1,300+ 元/年</span>
+              <span class="cloud-price-note">续费回归原价，涨幅极大，不建议长期</span>
+            </div>
+          </div>
+          <div class="cloud-promo">
+            <div class="cloud-promo-tag">当前活动</div>
+            <div class="cloud-promo-body">
+              <p><strong>开年采购季</strong></p>
+              <p>2026年3月4日 ~ 4月15日</p>
+              <p>Flexus X 高性能实例低至 3 折</p>
+            </div>
+          </div>
+          <ul class="cloud-card-notes">
+            <li>首年价格最低，但续费涨幅最大</li>
+            <li>适合短期试用，不适合长期持有</li>
+            <li>带宽和流量相对较少</li>
+          </ul>
+          <a href="https://activity.huaweicloud.com/newyear_promotion/index.html" target="_blank" class="cloud-card-btn">去华为云购买 →</a>
+        </div>
+
+        <!-- 京东云 -->
+        <div class="cloud-card">
+          <div class="cloud-card-header">
+            <h3>京东云</h3>
+          </div>
+          <p class="cloud-card-product">轻量云主机 · 2核2G · 3M带宽</p>
+          <div class="cloud-pricing">
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-new">新用户</span>
+              <span class="cloud-price-value"><strong>68</strong> 元/年</span>
+              <span class="cloud-price-note">1 年方案</span>
+            </div>
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-new">3年套餐</span>
+              <span class="cloud-price-value"><strong>368</strong> 元/3年</span>
+              <span class="cloud-price-note">约 123 元/年，一次买省心</span>
+            </div>
+            <div class="cloud-price-row">
+              <span class="cloud-price-label cloud-price-label-warn">续费价</span>
+              <span class="cloud-price-value">~520 元/年</span>
+              <span class="cloud-price-note">续费回归原价，建议直接买 3 年</span>
+            </div>
+          </div>
+          <ul class="cloud-card-notes">
+            <li>有预装 OpenClaw 镜像，可一键部署</li>
+            <li>买 3 年套餐性价比最高</li>
+            <li>关注 618 / 双11 活动可获得续费折扣</li>
+          </ul>
+          <a href="https://www.jdcloud.com/" target="_blank" class="cloud-card-btn">去京东云购买 →</a>
+        </div>
+
+      </div>
+
+      <div class="cloud-tip" style="margin-top: 24px;">
+        <strong>购买时注意：</strong>
+        <ul style="margin: 8px 0 0; padding-left: 18px;">
+          <li>操作系统选 <strong>Ubuntu 22.04</strong> 或 <strong>Debian 12</strong>（后面的教程基于此）</li>
+          <li>记好你的服务器 <strong>IP 地址</strong> 和 <strong>root 密码</strong>，下一步要用</li>
+          <li>如果不确定选哪个，选阿里云或腾讯云，教程最多、遇到问题最好搜</li>
+        </ul>
+      </div>
+
+      <div class="wizard-nav">
+        <div></div>
+        <button class="wizard-next-btn" onclick="goToStep(2)">已买好服务器，进入下一步 →</button>
+      </div>
+    </div>
+
+    <!-- ===== Step 2: 购买大模型 ===== -->
+    <div class="wizard-panel" id="step-2">
+      <h2>第二步：购买 AI 大模型的使用权</h2>
+      <p class="wizard-panel-desc">OpenClaw 本身是工具，需要连接一个 AI 大模型才能"思考"。你需要注册一个账号，获取 API Key（类似密码）。</p>
+
+      <div class="cloud-tip">
+        <strong>什么是 API Key？</strong>就像大模型的"上岗证"——有了它，OpenClaw 才能调用大模型帮你干活。注册后在对应平台创建即可，过程很简单。
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">1</div>
+        <div class="deploy-step-body">
+          <h3>选一个大模型，注册获取 API Key</h3>
+          <p>推荐以下选择，任选一个即可：</p>
+
+          <p style="font-size:13px;color:#888;margin-bottom:12px;">有 Coding Plan 的平台可以按月订阅，直接在编程工具（Cursor、VS Code 等）里用，不需要手动填 API Key，更方便。</p>
+
+          <div class="model-section-title">有 Coding Plan（订阅制，适合日常使用）</div>
+          <div class="model-options">
+
+            <div class="model-card">
+              <h4>智谱 GLM（智谱 AI）</h4>
+              <span class="model-tag model-tag-coding">Coding Plan 最全</span>
+              <div class="model-coding-plan">
+                <div class="model-coding-plan-label">Coding Plan</div>
+                <div class="model-coding-plan-body">
+                  <div class="model-price-row"><span>基础版</span><span>¥49 / 月</span></div>
+                  <div class="model-price-row"><span>专业版</span><span>¥99 / 月</span></div>
+                  <div class="model-price-row model-price-free"><span>支持工具</span><span>Cursor、VS Code、JetBrains 等 20+ 工具</span></div>
+                </div>
+              </div>
+              <p>适合程序员，直接在 IDE 里用，无需手动配置 API。大陆直连。</p>
+              <div class="model-price-table">
+                <div class="model-price-row"><span>GLM-4-Flash（API）</span><span>免费（有并发限制）</span></div>
+                <div class="model-price-row model-price-free"><span>新用户</span><span>赠送 100 万 Token</span></div>
+              </div>
+              <a href="https://open.bigmodel.cn/" target="_blank">去智谱 AI 注册 →</a>
+              <p class="model-note">注册后在「API Keys」或「Coding Plan」页面开通</p>
+            </div>
+
+            <div class="model-card">
+              <h4>通义千问（阿里云百炼）</h4>
+              <span class="model-tag model-tag-coding">有 Coding Plan</span>
+              <div class="model-coding-plan">
+                <div class="model-coding-plan-label">Coding Plan</div>
+                <div class="model-coding-plan-body">
+                  <div class="model-price-row"><span>Lite 版</span><span>¥7.9 / 首月，之后 ¥40 / 月</span></div>
+                  <div class="model-price-row"><span>Pro 版</span><span>¥99 / 月</span></div>
+                  <div class="model-price-row model-price-free"><span>产品</span><span>通义灵码（IDE 插件）</span></div>
+                </div>
+              </div>
+              <p>通义灵码支持 VS Code、JetBrains，中文补全最自然。大陆直连。</p>
+              <div class="model-price-table">
+                <div class="model-price-row"><span>Qwen-Plus（API）</span><span>输入 ¥0.8 / 输出 ¥2（百万 token）</span></div>
+                <div class="model-price-row model-price-free"><span>新用户</span><span>各模型赠 100 万 Token（共约 7000 万）</span></div>
+              </div>
+              <a href="https://tongyi.aliyun.com/lingma" target="_blank">去通义灵码开通 →</a>
+              <p class="model-note">API 注册：dashscope.console.aliyun.com</p>
+            </div>
+
+            <div class="model-card">
+              <h4>豆包（火山方舟）</h4>
+              <span class="model-tag model-tag-coding">有 Coding Plan</span>
+              <div class="model-coding-plan">
+                <div class="model-coding-plan-label">Coding Plan</div>
+                <div class="model-coding-plan-body">
+                  <div class="model-price-row"><span>基础版</span><span>¥40 / 月</span></div>
+                  <div class="model-price-row"><span>专业版</span><span>¥100 / 月</span></div>
+                  <div class="model-price-row model-price-free"><span>产品</span><span>Trae（字节 AI IDE，国内版免费）</span></div>
+                </div>
+              </div>
+              <p>字节出品，Trae 国内版完全免费可用，飞书集成最好。大陆直连。</p>
+              <div class="model-price-table">
+                <div class="model-price-row"><span>豆包 Pro 32K（API）</span><span>输入 ¥0.8 / 输出 ¥2（百万 token）</span></div>
+                <div class="model-price-row model-price-free"><span>新用户</span><span>每个模型赠 50 万 Token</span></div>
+              </div>
+              <a href="https://www.trae.com.cn/" target="_blank">去 Trae 下载（免费）→</a>
+              <p class="model-note">API 注册：console.volcengine.com/ark</p>
+            </div>
+
+            <div class="model-card">
+              <h4>Kimi（月之暗面）</h4>
+              <span class="model-tag model-tag-coding">有 Coding Plan</span>
+              <div class="model-coding-plan">
+                <div class="model-coding-plan-label">Coding Plan</div>
+                <div class="model-coding-plan-body">
+                  <div class="model-price-row"><span>会员</span><span>¥49 / 月（含 API 额度）</span></div>
+                  <div class="model-price-row model-price-free"><span>特点</span><span>长文档理解最强，联网搜索引用准</span></div>
+                </div>
+              </div>
+              <p>超长上下文处理能力最佳，适合分析大量文档。大陆直连。</p>
+              <div class="model-price-table">
+                <div class="model-price-row"><span>moonshot-v1-8k（API）</span><span>¥12 / 百万 token</span></div>
+                <div class="model-price-row model-price-free"><span>新用户</span><span>赠送 15 元免费额度</span></div>
+              </div>
+              <a href="https://platform.moonshot.cn/" target="_blank">去 Kimi 开放平台注册 →</a>
+              <p class="model-note">注册后在「API Key」页面创建</p>
+            </div>
+
+          </div>
+
+          <div class="model-section-title" style="margin-top:28px;">仅 API（按用量付费，适合和 OpenClaw 搭配）</div>
+          <div class="model-options">
+
+            <div class="model-card">
+              <h4>DeepSeek</h4>
+              <span class="model-tag model-tag-cheap">最推荐 · 最便宜</span>
+              <p>国产顶尖模型，代码能力强，性价比最高，最适合搭配 OpenClaw。大陆直连，无需翻墙。</p>
+              <div class="model-price-table">
+                <div class="model-price-row"><span>DeepSeek V3.2</span><span>输入 ¥2 / 输出 ¥8（百万 token）</span></div>
+                <div class="model-price-row"><span>DeepSeek R1（推理）</span><span>输入 ¥4 / 输出 ¥16（百万 token）</span></div>
+                <div class="model-price-row model-price-free"><span>新用户</span><span>赠送 10 元免费额度</span></div>
+              </div>
+              <a href="https://platform.deepseek.com/" target="_blank">去 DeepSeek 注册 →</a>
+              <p class="model-note">注册后进入「API Keys」页面创建</p>
+            </div>
+
+            <div class="model-card">
+              <h4>硅基流动（SiliconFlow）</h4>
+              <span class="model-tag model-tag-cheap">聚合平台 · 超低价</span>
+              <p>一个 Key 调用 DeepSeek、Qwen、GLM 等几十个主流模型，价格普遍低 30~50%，适合测试对比。</p>
+              <div class="model-price-table">
+                <div class="model-price-row"><span>DeepSeek V3（同款）</span><span>输入 ¥1.33 / 输出 ¥5.34（百万 token）</span></div>
+                <div class="model-price-row"><span>Qwen3-72B</span><span>输入 ¥0.57 / 输出 ¥2.28（百万 token）</span></div>
+                <div class="model-price-row model-price-free"><span>新用户</span><span>赠送 14 元免费额度</span></div>
+              </div>
+              <a href="https://siliconflow.cn/" target="_blank">去硅基流动注册 →</a>
+              <p class="model-note">一个账号，调用几十个主流模型</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="cloud-tip" style="margin-top: 24px;">
+        <strong>记好你的 API Key！</strong>创建后复制保存好，后面安装 OpenClaw 的时候需要填入。API Key 只会显示一次，丢了要重新创建。
+      </div>
+
+      <div class="wizard-nav">
+        <button class="wizard-prev-btn" onclick="goToStep(1)">← 上一步</button>
+        <button class="wizard-next-btn" onclick="goToStep(3)">已拿到 API Key，进入下一步 →</button>
+      </div>
+    </div>
+
+    <!-- ===== Step 3: 连接服务器 ===== -->
+    <div class="wizard-panel" id="step-3">
+      <h2>第三步：连接到你的服务器</h2>
+      <p class="wizard-panel-desc">买好服务器后，你需要"登录"到它上面去操作。就像远程控制一台电脑。</p>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">A</div>
+        <div class="deploy-step-body">
+          <h3>Mac 用户</h3>
+          <p>打开<strong>终端</strong>（启动台搜索"终端"），输入：</p>
+          <pre><code># 把 123.456.789.0 替换成你的服务器 IP
+ssh root@123.456.789.0</code></pre>
+          <p>第一次连接会问你 "Are you sure you want to continue connecting?"，输入 <code>yes</code> 回车。</p>
+          <p>然后输入你的 root 密码（输入时屏幕不会显示字符，这是正常的），回车。</p>
+          <p>看到类似 <code>root@server:~#</code> 的提示符就说明连接成功了。</p>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">B</div>
+        <div class="deploy-step-body">
+          <h3>Windows 用户</h3>
+          <p>Windows 10/11 自带 SSH 工具。打开 <strong>PowerShell</strong>（开始菜单搜索 "PowerShell"），输入：</p>
+          <pre><code># 把 123.456.789.0 替换成你的服务器 IP
+ssh root@123.456.789.0</code></pre>
+          <p>操作和 Mac 一样：输入 <code>yes</code> → 输入密码 → 看到服务器提示符就成功了。</p>
+          <div class="deploy-tip">
+            <strong>如果 ssh 命令不可用：</strong>下载 <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">PuTTY</a>，填入 IP 地址和端口 22，点 Open，输入用户名 root 和密码即可。
+          </div>
+        </div>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="wizard-prev-btn" onclick="goToStep(2)">← 上一步</button>
+        <button class="wizard-next-btn" onclick="goToStep(4)">已连接成功，进入下一步 →</button>
+      </div>
+    </div>
+
+    <!-- ===== Step 4: 安装 OpenClaw 并配置 ===== -->
+    <div class="wizard-panel" id="step-4">
+      <h2>第四步：安装 OpenClaw 并配置大模型</h2>
+      <p class="wizard-panel-desc">在服务器上执行几条命令装好 OpenClaw，然后把第二步拿到的 API Key 填进去。</p>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">1</div>
+        <div class="deploy-step-body">
+          <h3>安装 Docker</h3>
+          <p>在服务器终端里依次输入以下命令（可以一行行复制粘贴）：</p>
+          <pre><code># 更新系统
+apt update && apt upgrade -y
+
+# 一键安装 Docker
+curl -fsSL https://get.docker.com | sh
+
+# 验证安装
+docker --version</code></pre>
+          <p>看到 Docker 版本号就说明安装成功。</p>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">2</div>
+        <div class="deploy-step-body">
+          <h3>安装并启动 OpenClaw</h3>
+          <pre><code># 下载并启动 OpenClaw
+docker pull openclaw/openclaw:latest
+
+# 创建配置目录
+mkdir -p ~/.openclaw
+
+# 启动 OpenClaw
+docker run -d \
+  --name openclaw \
+  --restart always \
+  -p 18789:18789 \
+  -v ~/.openclaw:/root/.openclaw \
+  openclaw/openclaw:latest</code></pre>
+          <p>等待下载完成并启动。这一步可能需要几分钟，取决于你的网络速度。</p>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">3</div>
+        <div class="deploy-step-body">
+          <h3>验证 OpenClaw 是否运行</h3>
+          <pre><code># 查看运行状态
+docker ps</code></pre>
+          <p>如果看到 <code>openclaw</code> 容器状态为 <code>Up</code>，说明已经在运行了。</p>
+          <p>现在打开浏览器，访问：</p>
+          <pre><code>http://你的服务器IP:18789</code></pre>
+          <p>能看到 OpenClaw 的控制面板就说明安装成功了！</p>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">4</div>
+        <div class="deploy-step-body">
+          <h3>填入 API Key</h3>
+          <p>在 OpenClaw 控制面板里：</p>
+          <ol>
+            <li>进入 <strong>Settings</strong>（设置）页面</li>
+            <li>找到 <strong>LLM Provider</strong>（大模型提供商）</li>
+            <li>选择你注册的那个平台（如 Anthropic、DeepSeek）</li>
+            <li>粘贴你第二步拿到的 API Key</li>
+            <li>点击保存</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="wizard-prev-btn" onclick="goToStep(3)">← 上一步</button>
+        <button class="wizard-next-btn" onclick="goToStep(5)">安装配置完成，进入下一步 →</button>
+      </div>
+    </div>
+
+    <!-- ===== Step 5: 开始使用 ===== -->
+    <div class="wizard-panel" id="step-5">
+      <h2>第五步：开始使用！</h2>
+      <p class="wizard-panel-desc">恭喜！你的 AI 代理已经准备好了。</p>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">1</div>
+        <div class="deploy-step-body">
+          <h3>连接你的消息平台</h3>
+          <p>在 OpenClaw 控制面板里，你可以连接各种消息平台，之后直接在这些平台上跟你的 AI 代理对话：</p>
+          <ul>
+            <li><strong>Telegram</strong> — 最推荐，配置最简单</li>
+            <li><strong>微信</strong> — 需要额外配置，有封号风险</li>
+            <li><strong>Discord</strong> — 适合游戏/社区场景</li>
+            <li><strong>飞书 / 钉钉</strong> — 适合工作场景</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">2</div>
+        <div class="deploy-step-body">
+          <h3>试试给它发消息</h3>
+          <p>连接好消息平台后，试着发这些消息：</p>
+          <div class="example-msgs">
+            <div class="example-msg">"帮我查一下明天北京的天气"</div>
+            <div class="example-msg">"写一封请假邮件，明天有事"</div>
+            <div class="example-msg">"帮我总结一下这个链接的内容：xxx"</div>
+            <div class="example-msg">"每天早上 8 点给我发一份今日新闻摘要"</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deploy-step">
+        <div class="deploy-step-num">3</div>
+        <div class="deploy-step-body">
+          <h3>日常维护</h3>
+          <p>基本不需要维护。以下是偶尔可能用到的命令：</p>
+          <pre><code># 查看 OpenClaw 运行状态
+docker ps
+
+# 查看日志（排查问题时用）
+docker logs openclaw --tail 50
+
+# 更新到最新版本
+docker pull openclaw/openclaw:latest
+docker stop openclaw && docker rm openclaw
+docker run -d \
+  --name openclaw \
+  --restart always \
+  -p 18789:18789 \
+  -v ~/.openclaw:/root/.openclaw \
+  openclaw/openclaw:latest</code></pre>
+        </div>
+      </div>
+
+      <div class="wizard-done">
+        <h3>🎉 搞定了！</h3>
+        <p>你的 AI 代理现在 24 小时在线，随时待命。</p>
+        <p>想了解更多玩法？看看 <a href="use-cases.html">实际场景应用</a>，找找灵感。</p>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="wizard-prev-btn" onclick="goToStep(4)">← 上一步</button>
+        <a href="get-started.html" class="wizard-next-btn" style="text-decoration:none;">返回版本选择</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>🦐 虾逛 — 帮助你从零开始使用 AI 代理</p>
+    <p class="footer-note">本站为社区资讯站，与 OpenClaw 官方无直接关联。信息仅供参考。</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script>
+function goToStep(n) {
+  // Update progress bar
+  document.querySelectorAll('.wizard-step').forEach(function(el) {
+    var step = parseInt(el.dataset.step);
+    el.classList.toggle('active', step <= n);
+    el.classList.toggle('done', step < n);
+  });
+  // Update panels
+  document.querySelectorAll('.wizard-panel').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('step-' + n).classList.add('active');
+  // Scroll to top of content
+  document.querySelector('.wizard-progress-wrap').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+<script src="analytics/tracker.js"></script>
+</body>
+</html>

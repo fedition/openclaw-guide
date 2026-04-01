@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>安装部署 — 虾逛</title>
+  <meta name="description" content="选择云服务器或本地安装，开始部署你的 OpenClaw 变种。">
+  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/deploy.css?v=1">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo">🦐 虾逛</a>
+      <a href="changelog.html" class="logo-version">v0.4.0</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">首页</a></li>
+      <li class="nav-has-dropdown">
+        <a href="what-is.html">OpenClaw 能干嘛？</a>
+        <div class="nav-dropdown">
+          <a href="ai-basics.html">基础科普<div class="nav-dropdown-desc">没接触过 AI？从这里开始</div></a>
+          <a href="use-cases.html">实际场景应用<div class="nav-dropdown-desc">看看不同职业怎么用</div></a>
+        </div>
+      </li>
+      <li><a href="get-started.html">开始使用 OpenClaw</a></li>
+      <li><a href="reviews.html">各种工具的评测</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="deploy-hero">
+  <div class="container">
+    <a href="get-started.html" class="deploy-back">← 返回版本选择</a>
+    <h1 id="deployTitle">安装部署</h1>
+    <p class="deploy-hero-desc" id="deployDesc">选择一种方式，开始使用。</p>
+  </div>
+</section>
+
+<!-- Deploy Options -->
+<section class="deploy-section">
+  <div class="container">
+    <h2>两种方式，选一个就行</h2>
+    <p class="deploy-intro">不管你选哪种，最终效果是一样的。区别只在于"装在哪里"。</p>
+
+    <div class="deploy-compare">
+
+      <!-- Cloud -->
+      <div class="deploy-option deploy-option-recommended">
+        <div class="deploy-option-badge">推荐</div>
+        <div class="deploy-option-icon">☁️</div>
+        <h3>安装到云服务器</h3>
+        <p class="deploy-option-desc">把程序装在云端，随时随地都能用。</p>
+
+        <ul class="deploy-pros">
+          <li><strong>更安全</strong> — 程序运行在远程服务器，不会影响你的电脑，不用担心数据丢失或系统异常</li>
+          <li><strong>随时可用</strong> — 24 小时运行，手机、平板、任何设备都能操作</li>
+          <li><strong>不占电脑资源</strong> — 不吃你电脑的内存和 CPU，该干嘛干嘛</li>
+          <li><strong>适合长期使用</strong> — 服务器一直在线，AI 代理可以持续工作</li>
+        </ul>
+
+        <div class="deploy-cons">
+          <p><strong>需要注意：</strong></p>
+          <ul>
+            <li>需要额外购买云服务器（约 ¥30~100/月）</li>
+            <li>需要购买 AI 大模型 API 费用（按使用量计费）</li>
+            <li>首次配置需要 10~30 分钟</li>
+          </ul>
+        </div>
+
+        <div class="deploy-action">
+          <a href="deploy-cloud.html" id="cloudBtn" class="deploy-btn deploy-btn-primary">云服务器部署教程 →</a>
+          <p class="deploy-action-note">推荐使用阿里云、腾讯云，或 Oracle 免费服务器</p>
+        </div>
+      </div>
+
+      <!-- Local -->
+      <div class="deploy-option">
+        <div class="deploy-option-icon">💻</div>
+        <h3>安装到自己电脑上</h3>
+        <p class="deploy-option-desc">直接装在你的 Windows 或 Mac 上。</p>
+
+        <ul class="deploy-pros">
+          <li><strong>不需要买服务器</strong> — 用你现有的电脑就行，只需要付大模型费用</li>
+          <li><strong>数据完全本地</strong> — 所有数据都在你的电脑上，最大程度保护隐私</li>
+          <li><strong>上手快</strong> — 下载安装，打开就能用</li>
+        </ul>
+
+        <div class="deploy-cons">
+          <p><strong>需要注意：</strong></p>
+          <ul>
+            <li>需要购买 AI 大模型 API 费用（按使用量计费）</li>
+            <li>电脑关机后 AI 代理就停了，无法 24 小时工作</li>
+            <li>占用电脑内存和 CPU，可能影响其他工作</li>
+            <li>OpenClaw 有权限操作你的电脑文件，如果配置不当可能误删文件或造成其他问题</li>
+            <li>只能在这台电脑上用，手机上没法操作</li>
+          </ul>
+        </div>
+
+        <div class="deploy-action">
+          <a href="deploy-local.html" id="localBtn" class="deploy-btn deploy-btn-outline">本地安装教程 →</a>
+          <p class="deploy-action-note">需要 Windows 10+ 或 macOS 12+，内存 8GB 以上</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>🦐 虾逛 — 帮助你从零开始使用 AI 代理</p>
+    <p class="footer-note">本站为社区资讯站，与 OpenClaw 官方无直接关联。信息仅供参考。</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script>
+// Read tool name from URL and update page title
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var tool = params.get('tool');
+  if (!tool) return;
+
+  var names = {
+    autoclaw: 'AutoClaw',
+    workbuddy: 'WorkBuddy',
+    qclaw: 'QClaw',
+    copaw: 'CoPaw',
+    arkclaw: 'ArkClaw',
+    kimiclaw: 'Kimi Claw',
+    maxclaw: 'MaxClaw',
+    hiclaw: 'HiClaw',
+    moltworker: 'Moltworker',
+    nemoclaw: 'NemoClaw',
+    nanoclaw: 'NanoClaw',
+    ironclaw: 'IronClaw',
+    zeroclaw: 'ZeroClaw',
+    picoclaw: 'PicoClaw',
+    nanobot: 'Nanobot',
+    nullclaw: 'NullClaw',
+    metaclaw: 'MetaClaw',
+    moltis: 'Moltis',
+    openfang: 'OpenFang',
+    microclaw: 'MicroClaw'
+  };
+
+  var name = names[tool] || tool;
+  var titleEl = document.getElementById('deployTitle');
+  var descEl = document.getElementById('deployDesc');
+  if (titleEl) titleEl.textContent = '安装部署 ' + name;
+  if (descEl) descEl.textContent = '选择一种方式，开始使用 ' + name + '。';
+  document.title = '安装部署 ' + name + ' — 虾逛';
+})();
+</script>
+<script src="analytics/tracker.js"></script>
+</body>
+</html>

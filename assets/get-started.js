@@ -1,42 +1,47 @@
-// Get Started page - filter functionality
+// Get Started page - dropdown filter functionality
 (function() {
-  const grid = document.getElementById('versionGrid');
+  var grid = document.getElementById('versionGrid');
   if (!grid) return;
 
-  const cards = grid.querySelectorAll('.gs-card');
-  const buttons = document.querySelectorAll('.gs-filter-btn');
-  const countEl = document.getElementById('gsCount');
+  var cards = grid.querySelectorAll('.gs-card');
+  var countEl = document.getElementById('gsCount');
+  var selects = document.querySelectorAll('.gs-select');
 
-  function updateCount() {
-    const visible = grid.querySelectorAll('.gs-card:not(.gs-hidden)').length;
-    countEl.textContent = '显示 ' + visible + ' / ' + cards.length + ' 个版本';
+  function applyFilters() {
+    var filters = {};
+    selects.forEach(function(sel) {
+      filters[sel.dataset.group] = sel.value;
+    });
+
+    var visible = 0;
+    cards.forEach(function(card) {
+      var tags = card.dataset.tags || '';
+      var show = true;
+
+      for (var group in filters) {
+        var val = filters[group];
+        if (val !== 'all' && tags.indexOf(val) === -1) {
+          show = false;
+          break;
+        }
+      }
+
+      if (show) {
+        card.classList.remove('gs-hidden');
+        visible++;
+      } else {
+        card.classList.add('gs-hidden');
+      }
+    });
+
+    if (countEl) {
+      countEl.textContent = visible + ' / ' + cards.length;
+    }
   }
 
-  buttons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      const filter = this.dataset.filter;
-
-      // Update active button
-      buttons.forEach(function(b) { b.classList.remove('active'); });
-      this.classList.add('active');
-
-      // Filter cards
-      cards.forEach(function(card) {
-        if (filter === 'all') {
-          card.classList.remove('gs-hidden');
-        } else {
-          var tags = card.dataset.tags || '';
-          if (tags.indexOf(filter) !== -1) {
-            card.classList.remove('gs-hidden');
-          } else {
-            card.classList.add('gs-hidden');
-          }
-        }
-      });
-
-      updateCount();
-    });
+  selects.forEach(function(sel) {
+    sel.addEventListener('change', applyFilters);
   });
 
-  updateCount();
+  applyFilters();
 })();
